@@ -1,0 +1,32 @@
+{
+  "id": "fastapi",
+  "name": "FastAPI",
+  "description": "Python FastAPI with REST endpoints, Pydantic schemas, and CORS middleware.",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🐍",
+  "tech": ["FastAPI", "Python", "Pydantic"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["fastapi", "python", "api", "pydantic"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 50,
+  "prerequisites": ["python >= 3.10"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run pip install -r requirements.txt", "Configure .env.example", "Run uvicorn main:app --reload"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "fastapi-app",
+      "required": false,
+      "description": "Name used in the API title",
+      "validation": "^[a-z][a-z0-9-]*$"
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

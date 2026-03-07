@@ -1,0 +1,21 @@
+{
+  "id": "rust-axum",
+  "name": "Rust Axum",
+  "description": "Rust HTTP server with Axum, Tokio, and tower-http middleware.",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🦀",
+  "tech": ["Rust", "Axum", "Tokio"],
+  "difficulty": "advanced",
+  "author": "Belfalas",
+  "tags": ["rust", "axum", "tokio", "api"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 80,
+  "prerequisites": ["rust >= 1.75"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Configure .env.example", "Run cargo run"],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

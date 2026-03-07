@@ -1,0 +1,21 @@
+{
+  "id": "go-fiber",
+  "name": "Go Fiber API",
+  "description": "Go web server with Fiber framework and middleware stack.",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🔷",
+  "tech": ["Go", "Fiber"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["go", "fiber", "api", "rest"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 70,
+  "prerequisites": ["go >= 1.22"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run go mod tidy", "Configure .env.example", "Run go run main.go"],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

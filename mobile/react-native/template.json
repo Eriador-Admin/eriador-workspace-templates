@@ -1,0 +1,32 @@
+{
+  "id": "react-native",
+  "name": "React Native",
+  "description": "Cross-platform mobile app with Expo and React Navigation.",
+  "version": "1.0.0",
+  "category": "mobile",
+  "icon": "📱",
+  "tech": ["React Native", "Expo", "TypeScript"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["react-native", "expo", "mobile", "typescript"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 100,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run npx expo start"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-app",
+      "required": false,
+      "description": "Name for the project in package.json and app.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

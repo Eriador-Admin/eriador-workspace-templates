@@ -1,0 +1,21 @@
+{
+  "id": "flask-ml",
+  "name": "Flask ML Service",
+  "description": "Python Flask app with scikit-learn model serving and CORS.",
+  "version": "1.0.0",
+  "category": "ml",
+  "icon": "🧬",
+  "tech": ["Flask", "scikit-learn"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["flask", "python", "ml", "scikit-learn", "machine-learning"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 110,
+  "prerequisites": ["python >= 3.10"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run pip install -r requirements.txt", "Configure .env.example", "Run python app.py"],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

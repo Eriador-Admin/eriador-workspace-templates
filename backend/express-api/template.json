@@ -1,0 +1,48 @@
+{
+  "id": "express-api",
+  "name": "Express REST API",
+  "description": "Node.js Express API with middleware, JWT auth scaffolding, and CORS.",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🟢",
+  "tech": ["Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["express", "nodejs", "api", "rest", "jwt"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 40,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Configure .env.example", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-api",
+      "required": false,
+      "description": "Name used in package.json and README",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Default port for the Express server"
+    },
+    {
+      "name": "LICENSE_TYPE",
+      "label": "License",
+      "type": "choice",
+      "options": ["MIT", "Apache-2.0", "ISC", "UNLICENSED"],
+      "default": "MIT",
+      "required": false
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

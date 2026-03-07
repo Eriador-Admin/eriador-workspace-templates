@@ -1,0 +1,32 @@
+{
+  "id": "fullstack-t3",
+  "name": "T3 Stack",
+  "description": "Full-stack TypeScript with Next.js, tRPC, Prisma, and Tailwind.",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "icon": "🔺",
+  "tech": ["Next.js", "tRPC", "Prisma", "Tailwind"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["nextjs", "trpc", "prisma", "tailwind", "typescript", "fullstack"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 90,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Configure .env.example", "Run npx prisma db push", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "t3-app",
+      "required": false,
+      "description": "Name for the project in package.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}
