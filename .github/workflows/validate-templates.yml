@@ -1,0 +1,62 @@
+# .github/workflows/validate-templates.yml
+name: Validate Templates
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate template structure and ID uniqueness
+        run: bash validate.sh
+
+      - name: Build manifest.json (validation only)
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const RESERVED = new Set(['.github', 'node_modules', '.git']);
+            const categories = fs.readdirSync('.', {withFileTypes: true})
+              .filter(d => d.isDirectory() && !RESERVED.has(d.name) && !d.name.startsWith('.'))
+              .map(d => d.name);
+            const templates = [];
+            for (const cat of categories) {
+              const tplDirs = fs.readdirSync(cat, {withFileTypes: true})
+                .filter(d => d.isDirectory())
+                .map(d => d.name);
+              for (const tpl of tplDirs) {
+                const metaPath = path.join(cat, tpl, 'template.json');
+                if (!fs.existsSync(metaPath)) continue;
+                const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
+                const filesDir = path.join(cat, tpl, 'files');
+                let fileCount = 0;
+                if (fs.existsSync(filesDir)) {
+                  fileCount = fs.readdirSync(filesDir, {recursive: true})
+                    .filter(f => fs.statSync(path.join(filesDir, f)).isFile()).length;
+                }
+                templates.push({ ...meta, file_count: fileCount });
+              }
+            }
+            const manifest = {
+              generated_at: new Date().toISOString(),
+              count: templates.length,
+              categories: categories.sort(),
+              templates: templates.sort((a, b) => a.name.localeCompare(b.name))
+            };
+            fs.writeFileSync('manifest.json', JSON.stringify(manifest, null, 2));
+            console.log('Built manifest.json with', templates.length, 'templates across', categories.length, 'categories');
+          "
+
+      # NOTE: manifest.json is NOT committed to the repo.
+      # The server builds it from disk at runtime (see design doc Section 8).
+      # CI builds it here only to validate that all templates can be aggregated without errors.

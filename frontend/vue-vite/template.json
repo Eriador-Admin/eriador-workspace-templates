@@ -1,0 +1,40 @@
+{
+  "id": "vue-vite",
+  "name": "Vue 3 + Vite",
+  "description": "Vue 3 with Composition API, Vue Router, and Pinia state management.",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "💚",
+  "tech": ["Vue", "Vite", "Pinia"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["vue", "vite", "pinia", "spa"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 30,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "vue-vite-app",
+      "required": false,
+      "description": "Name for the project in package.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Port for Vite dev server"
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

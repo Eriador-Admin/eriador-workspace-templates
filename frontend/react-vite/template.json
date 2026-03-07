@@ -1,0 +1,56 @@
+{
+  "id": "react-vite",
+  "name": "React + Vite",
+  "description": "Modern React app with Vite, React Router, and Tailwind CSS.",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "⚛️",
+  "tech": ["React", "Vite", "Tailwind CSS", "React Router"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["react", "vite", "tailwind", "spa", "react-router"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 10,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "react-vite-app",
+      "required": false,
+      "description": "Name for the project in package.json (lowercase, hyphens only)",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "APP_TITLE",
+      "label": "App Title",
+      "type": "string",
+      "default": "My React App",
+      "required": false,
+      "description": "Title displayed in the browser tab and header"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Vite dev server port"
+    },
+    {
+      "name": "USE_STRICT_MODE",
+      "label": "React Strict Mode",
+      "type": "boolean",
+      "default": true,
+      "required": false,
+      "description": "Wrap app in React.StrictMode"
+    }
+  ],
+  "created_at": "2026-03-06",
+  "updated_at": "2026-03-06"
+}

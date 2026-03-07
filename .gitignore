@@ -1,0 +1,25 @@
+# Generated files
+manifest.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (from CI runs)
+node_modules/
+
+# Python bytecode (from template development)
+__pycache__/
+*.pyc
+
+# Build artifacts
+dist/
+build/
+target/
