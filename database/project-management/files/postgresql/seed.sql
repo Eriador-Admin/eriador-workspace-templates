@@ -1,0 +1,48 @@
+-- {{APP_NAME}} Seed Data — PostgreSQL
+
+-- Projects
+INSERT INTO projects (id, name, slug, description, owner_id, status) VALUES
+    ('a1000000-0000-0000-0000-000000000001', 'Website Redesign', 'website-redesign', 'Complete overhaul of the company marketing site.', 'u1000000-0000-0000-0000-000000000001', 'active'),
+    ('a1000000-0000-0000-0000-000000000002', 'Mobile App v2', 'mobile-app-v2', 'Next generation mobile application.', 'u1000000-0000-0000-0000-000000000001', 'active');
+
+-- Project members
+INSERT INTO project_members (project_id, user_id, role) VALUES
+    ('a1000000-0000-0000-0000-000000000001', 'u1000000-0000-0000-0000-000000000001', 'owner'),
+    ('a1000000-0000-0000-0000-000000000001', 'u1000000-0000-0000-0000-000000000002', 'member'),
+    ('a1000000-0000-0000-0000-000000000001', 'u1000000-0000-0000-0000-000000000003', 'member');
+
+-- Board
+INSERT INTO boards (id, project_id, name, sort_order) VALUES
+    ('b1000000-0000-0000-0000-000000000001', 'a1000000-0000-0000-0000-000000000001', 'Sprint Board', 0);
+
+-- Columns
+INSERT INTO columns (id, board_id, name, color, wip_limit, sort_order) VALUES
+    ('c1000000-0000-0000-0000-000000000001', 'b1000000-0000-0000-0000-000000000001', 'Backlog',     '#9CA3AF', NULL, 0),
+    ('c1000000-0000-0000-0000-000000000002', 'b1000000-0000-0000-0000-000000000001', 'To Do',       '#3B82F6', NULL, 1),
+    ('c1000000-0000-0000-0000-000000000003', 'b1000000-0000-0000-0000-000000000001', 'In Progress', '#F59E0B', 3,    2),
+    ('c1000000-0000-0000-0000-000000000004', 'b1000000-0000-0000-0000-000000000001', 'Review',      '#8B5CF6', 2,    3),
+    ('c1000000-0000-0000-0000-000000000005', 'b1000000-0000-0000-0000-000000000001', 'Done',        '#10B981', NULL, 4);
+
+-- Labels
+INSERT INTO labels (id, project_id, name, color) VALUES
+    ('l1000000-0000-0000-0000-000000000001', 'a1000000-0000-0000-0000-000000000001', 'Bug',         '#EF4444'),
+    ('l1000000-0000-0000-0000-000000000002', 'a1000000-0000-0000-0000-000000000001', 'Feature',     '#3B82F6'),
+    ('l1000000-0000-0000-0000-000000000003', 'a1000000-0000-0000-0000-000000000001', 'Enhancement', '#10B981'),
+    ('l1000000-0000-0000-0000-000000000004', 'a1000000-0000-0000-0000-000000000001', 'Urgent',      '#F59E0B');
+
+-- Tasks
+INSERT INTO tasks (id, project_id, column_id, title, description, priority, assignee_id, reporter_id, due_date, estimate_hrs) VALUES
+    ('t1000000-0000-0000-0000-000000000001', 'a1000000-0000-0000-0000-000000000001', 'c1000000-0000-0000-0000-000000000003', 'Design new homepage mockup', 'Create Figma mockup for the new homepage layout.', 'high', 'u1000000-0000-0000-0000-000000000002', 'u1000000-0000-0000-0000-000000000001', CURRENT_DATE + 7, 8),
+    ('t1000000-0000-0000-0000-000000000002', 'a1000000-0000-0000-0000-000000000001', 'c1000000-0000-0000-0000-000000000002', 'Set up CI/CD pipeline', 'Configure GitHub Actions for automated testing and deployment.', 'medium', 'u1000000-0000-0000-0000-000000000003', 'u1000000-0000-0000-0000-000000000001', CURRENT_DATE + 14, 4),
+    ('t1000000-0000-0000-0000-000000000003', 'a1000000-0000-0000-0000-000000000001', 'c1000000-0000-0000-0000-000000000001', 'Fix mobile nav overflow', 'Navigation menu overflows on screens < 375px wide.', 'critical', NULL, 'u1000000-0000-0000-0000-000000000002', NULL, 2);
+
+-- Task labels
+INSERT INTO task_labels (task_id, label_id) VALUES
+    ('t1000000-0000-0000-0000-000000000001', 'l1000000-0000-0000-0000-000000000002'),
+    ('t1000000-0000-0000-0000-000000000003', 'l1000000-0000-0000-0000-000000000001'),
+    ('t1000000-0000-0000-0000-000000000003', 'l1000000-0000-0000-0000-000000000004');
+
+-- Task comments
+INSERT INTO task_comments (task_id, author_id, body) VALUES
+    ('t1000000-0000-0000-0000-000000000001', 'u1000000-0000-0000-0000-000000000002', 'Started on the wireframes, should have first draft by EOD.'),
+    ('t1000000-0000-0000-0000-000000000001', 'u1000000-0000-0000-0000-000000000001', 'Great, make sure to include the testimonials section.');

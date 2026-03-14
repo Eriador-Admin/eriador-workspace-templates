@@ -7,12 +7,19 @@ Created by {{AUTHOR}} on {{DATE}}.
 ## Getting Started
 
 ```bash
-go mod tidy
-cp .env.example .env
-go run main.go
+bash init.sh
+bash run.sh
 ```
 
 API runs at [http://localhost:3000](http://localhost:3000).
+
+To stop the server:
+
+```bash
+bash stop.sh
+```
+
+See `readme-agent.md` for Docker deployment and environment variable reference.
 
 ## Customize
 

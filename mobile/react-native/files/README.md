@@ -7,6 +7,14 @@ Created by {{AUTHOR}} on {{DATE}}.
 ## Getting Started
 
 ```bash
-npm install
-npx expo start
+bash init.sh
+bash run.sh
 ```
+
+To stop the Expo dev server:
+
+```bash
+bash stop.sh
+```
+
+See `readme-agent.md` for deployment options and environment variable reference.

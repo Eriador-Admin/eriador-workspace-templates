@@ -7,9 +7,16 @@ Created by {{AUTHOR}} on {{DATE}}.
 ## Getting Started
 
 ```bash
-pip install -r requirements.txt
-cp .env.example .env
-python app.py
+bash init.sh
+bash run.sh
 ```
 
 POST to [http://localhost:5000/predict](http://localhost:5000/predict) with `{"features": [1, 2]}`.
+
+To stop the server:
+
+```bash
+bash stop.sh
+```
+
+See `readme-agent.md` for Docker deployment and environment variable reference.
