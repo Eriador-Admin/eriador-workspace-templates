@@ -7,8 +7,14 @@ Created by {{AUTHOR}} on {{DATE}}.
 ## Getting Started
 
 ```bash
-npm install
-cp .env.example .env
-npx prisma db push
-npm run dev
+bash init.sh
+bash run.sh
 ```
+
+To stop the server:
+
+```bash
+bash stop.sh
+```
+
+See `readme-agent.md` for Docker deployment and environment variable reference.

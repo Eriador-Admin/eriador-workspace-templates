@@ -1,0 +1,43 @@
+{
+  "id": "saas-multi-tenant",
+  "name": "SaaS Multi-Tenant Database",
+  "description": "Database schema for multi-tenant SaaS applications with organizations, members, subscriptions, and invitations. Includes SQL for PostgreSQL, MySQL, SQLite, and Oracle.",
+  "version": "1.0.0",
+  "category": "database",
+  "icon": "🏢",
+  "tech": ["SQL", "PostgreSQL", "MySQL", "SQLite", "Oracle"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["database", "sql", "saas", "multi-tenant", "organizations", "subscriptions"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 40,
+  "prerequisites": [],
+  "deprecated": false,
+  "deprecated_message": "",
+  "post_scaffold": [
+    "Choose your database vendor folder (postgresql/, mysql/, sqlite/, or oracle/)",
+    "Run `bash init.sh` to execute the schema against your database",
+    "Run seed.sql to populate sample data"
+  ],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application / Database Name",
+      "type": "text",
+      "default": "mysaas",
+      "required": true,
+      "validation": "^[a-z][a-z0-9_]*$"
+    },
+    {
+      "name": "DB_VENDOR",
+      "label": "Database Vendor",
+      "type": "choice",
+      "options": ["postgresql", "mysql", "sqlite", "oracle"],
+      "default": "postgresql",
+      "required": true
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

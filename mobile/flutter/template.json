@@ -1,0 +1,49 @@
+{
+  "id": "flutter",
+  "name": "Flutter App",
+  "description": "A cross-platform mobile application built with Flutter and Dart, featuring Material Design and a clean architecture starting point.",
+  "version": "1.0.0",
+  "category": "mobile",
+  "icon": "💙",
+  "tech": ["Flutter", "Dart", "Material Design"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["mobile", "flutter", "dart", "cross-platform", "ios", "android"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 80,
+  "prerequisites": ["flutter >= 3.0"],
+  "deprecated": false,
+  "deprecated_message": "",
+  "post_scaffold": [
+    "Run `bash init.sh` to install dependencies",
+    "Run `bash run.sh` to start the app on a connected device or emulator",
+    "Use `flutter devices` to list available targets"
+  ],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "text",
+      "default": "my_flutter_app",
+      "required": true,
+      "validation": "^[a-z][a-z0-9_]*$"
+    },
+    {
+      "name": "APP_TITLE",
+      "label": "App Display Title",
+      "type": "text",
+      "default": "My Flutter App",
+      "required": false
+    },
+    {
+      "name": "ORG_NAME",
+      "label": "Organization Identifier",
+      "type": "text",
+      "default": "com.example",
+      "required": false
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "angular",
+  "name": "Angular",
+  "description": "Enterprise-grade Angular app with standalone components and Angular Router.",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "🅰️",
+  "tech": ["Angular", "TypeScript", "RxJS"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["angular", "typescript", "spa", "enterprise"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 15,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run ng serve"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-angular-app",
+      "required": false,
+      "description": "Name for the project in package.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "APP_TITLE",
+      "label": "App Title",
+      "type": "string",
+      "default": "My Angular App",
+      "required": false,
+      "description": "Title displayed in the browser tab and header"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 4200,
+      "required": false,
+      "description": "Angular dev server port"
+    }
+  ],
+  "created_at": "2026-03-13",
+  "updated_at": "2026-03-13"
+}

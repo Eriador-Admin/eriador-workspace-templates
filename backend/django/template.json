@@ -1,0 +1,40 @@
+{
+  "id": "django",
+  "name": "Django REST API",
+  "description": "Python Django REST framework API with project scaffolding and CORS.",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🐍",
+  "tech": ["Django", "Python", "Django REST Framework"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["django", "python", "api", "rest", "drf"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 55,
+  "prerequisites": ["python >= 3.10"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run pip install -r requirements.txt", "Run python manage.py runserver"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "myproject",
+      "required": false,
+      "description": "Django project directory name (lowercase, underscores only)",
+      "validation": "^[a-z][a-z0-9_]*$"
+    },
+    {
+      "name": "PORT",
+      "label": "Server Port",
+      "type": "number",
+      "default": 8000,
+      "required": false,
+      "description": "Default port for the Django dev server"
+    }
+  ],
+  "created_at": "2026-03-13",
+  "updated_at": "2026-03-13"
+}
