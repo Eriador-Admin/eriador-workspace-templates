@@ -1,0 +1,27 @@
+{
+  "id": "keycloak",
+  "name": "Keycloak SSO",
+  "description": "Enterprise SSO and identity management with Keycloak, OIDC integration, and Express app",
+  "version": "1.0.0",
+  "category": "auth",
+  "icon": "🔐",
+  "tech": ["Keycloak", "TypeScript", "Express", "Node.js", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["keycloak", "sso", "oidc", "oauth2", "identity", "iam"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-keycloak-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

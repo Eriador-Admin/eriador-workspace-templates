@@ -1,0 +1,29 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+include:
+  - local: ci/templates/test.yml
+  - local: ci/templates/docker.yml
+  - local: ci/templates/deploy.yml
+
+variables:
+  NODE_IMAGE: node:20-alpine
+  DOCKER_IMAGE: docker:24
+
+# ---- Lint Stage ----
+lint:
+  stage: lint
+  image: $NODE_IMAGE
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - node_modules/
+  script:
+    - npm ci
+    - npm run lint
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

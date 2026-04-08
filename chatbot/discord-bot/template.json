@@ -1,0 +1,27 @@
+{
+  "id": "discord-bot",
+  "name": "Discord Bot",
+  "description": "Discord bot with discord.js, slash commands, event handling, and modular structure",
+  "version": "1.0.0",
+  "category": "chatbot",
+  "icon": "🤖",
+  "tech": ["JavaScript", "Discord.js", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["discord", "bot", "chatbot", "slash-commands"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Bot Name",
+      "type": "string",
+      "default": "my-discord-bot",
+      "required": true,
+      "description": "Name of the Discord bot"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

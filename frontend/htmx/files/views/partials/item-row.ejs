@@ -1,0 +1,29 @@
+<tr id="item-<%= item.id %>" class="<%= item.done ? 'done' : '' %>">
+  <td><%= item.name %></td>
+  <td><%= item.description %></td>
+  <td>
+    <button
+      hx-put="/items/<%= item.id %>/toggle"
+      hx-target="#item-<%= item.id %>"
+      hx-swap="outerHTML"
+      class="btn-toggle"
+    >
+      <%= item.done ? '✅' : '⬜' %>
+    </button>
+  </td>
+  <td>
+    <button
+      hx-get="/items/<%= item.id %>/edit"
+      hx-target="#item-<%= item.id %>"
+      hx-swap="outerHTML"
+      class="btn-edit"
+    >Edit</button>
+    <button
+      hx-delete="/items/<%= item.id %>"
+      hx-confirm="Delete this item?"
+      hx-target="#item-<%= item.id %>"
+      hx-swap="outerHTML"
+      class="btn-delete"
+    >Delete</button>
+  </td>
+</tr>

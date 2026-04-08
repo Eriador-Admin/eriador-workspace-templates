@@ -1,0 +1,27 @@
+{
+  "id": "mqtt-mosquitto",
+  "name": "MQTT Mosquitto Broker",
+  "description": "Eclipse Mosquitto MQTT broker with TypeScript pub/sub clients for IoT messaging",
+  "version": "1.0.0",
+  "category": "iot",
+  "icon": "📡",
+  "tech": ["TypeScript", "MQTT", "Mosquitto", "Docker", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["mqtt", "mosquitto", "iot", "pubsub", "messaging"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-mqtt-project",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

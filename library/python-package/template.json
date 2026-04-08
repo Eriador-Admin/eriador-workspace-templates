@@ -1,0 +1,35 @@
+{
+  "id": "python-package",
+  "name": "Python Package",
+  "description": "Python package with pyproject.toml, pytest testing, and PyPI-ready configuration",
+  "version": "1.0.0",
+  "category": "library",
+  "icon": "🐍",
+  "tech": ["Python", "pytest", "setuptools"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["pypi", "package", "library", "python", "open-source"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 20,
+  "variables": [
+    {
+      "name": "PACKAGE_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "my_package",
+      "required": true,
+      "description": "Python package name (use underscores, not hyphens)"
+    },
+    {
+      "name": "PACKAGE_DESCRIPTION",
+      "label": "Package Description",
+      "type": "string",
+      "default": "A useful Python package",
+      "required": false,
+      "description": "Short description for pyproject.toml"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,3 @@
+*.love
+.env
+.DS_Store

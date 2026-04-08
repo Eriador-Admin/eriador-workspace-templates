@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PROJECT_NAME}}</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #333; }
+    h1 { color: #009639; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+    .status { padding: 1rem; background: #e8f5e9; border-radius: 8px; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Nginx is running</h1>
+  <div class="status">Served by Nginx reverse proxy</div>
+  <h2>Endpoints</h2>
+  <ul>
+    <li><code>GET /</code> &mdash; This static page</li>
+    <li><code>GET /api/</code> &mdash; Proxied to API backend (load balanced)</li>
+    <li><code>GET /health</code> &mdash; Nginx stub status</li>
+  </ul>
+  <h2>Test Load Balancing</h2>
+  <pre>for i in $(seq 1 6); do curl -s http://localhost/api/ | jq .hostname; done</pre>
+</body>
+</html>

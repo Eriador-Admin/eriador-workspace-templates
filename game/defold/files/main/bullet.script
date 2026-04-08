@@ -1,0 +1,20 @@
+-- Bullet script for {{PROJECT_NAME}}
+-- Moves upward, destroys when off screen
+
+local SPEED = 500
+
+function update(self, dt)
+    local pos = go.get_position()
+    pos.y = pos.y + SPEED * dt
+    go.set_position(pos)
+
+    if pos.y > 620 then
+        go.delete()
+    end
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("hit") then
+        go.delete()
+    end
+end

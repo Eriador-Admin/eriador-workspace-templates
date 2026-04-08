@@ -1,0 +1,28 @@
+{
+  "id": "lemonsqueezy",
+  "name": "Lemon Squeezy Payments",
+  "description": "Node.js payment integration with Lemon Squeezy featuring checkouts, webhooks, and subscriptions",
+  "version": "1.0.0",
+  "category": "payment",
+  "icon": "🍋",
+  "tech": ["TypeScript", "Lemon Squeezy", "Express", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["payment", "lemonsqueezy", "checkout", "subscription", "webhook"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "prerequisites": ["Node.js 18+", "Lemon Squeezy account"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-lemonsqueezy-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

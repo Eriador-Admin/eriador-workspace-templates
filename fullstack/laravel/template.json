@@ -1,0 +1,35 @@
+{
+  "id": "laravel",
+  "name": "Laravel",
+  "description": "Laravel PHP full-stack application with Blade, Eloquent, and Docker setup",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "icon": "🔴",
+  "tech": ["PHP", "Laravel", "Blade", "MySQL", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["laravel", "php", "fullstack", "blade", "eloquent"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-laravel-app",
+      "required": true,
+      "description": "Name of the Laravel project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 8000,
+      "required": false,
+      "description": "Port for the development server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

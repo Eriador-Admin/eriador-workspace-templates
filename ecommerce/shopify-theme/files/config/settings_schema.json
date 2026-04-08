@@ -1,0 +1,31 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "{{PROJECT_NAME}}",
+    "theme_version": "1.0.0",
+    "theme_author": "Belfalas"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary color",
+        "default": "#3b82f6"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text color",
+        "default": "#1e293b"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+]

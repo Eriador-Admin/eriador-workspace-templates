@@ -1,0 +1,19 @@
+{
+  "name": "{{FUNCTION_NAME}}",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/src/functions/*.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && func start --port {{DEV_PORT}}",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  }
+}

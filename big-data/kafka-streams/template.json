@@ -1,0 +1,48 @@
+{
+  "id": "kafka-streams",
+  "name": "Kafka Streams",
+  "description": "Java Kafka Streams application for real-time stream processing.",
+  "version": "1.0.0",
+  "category": "big-data",
+  "icon": "📡",
+  "tech": ["Apache Kafka", "Kafka Streams", "Java", "Maven"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["kafka", "streaming", "real-time", "event-driven", "java"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 30,
+  "prerequisites": ["java >= 11", "maven >= 3.8"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run bash init.sh", "Run bash run.sh"],
+  "variables": [
+    {
+      "name": "GROUP_ID",
+      "label": "Maven Group ID",
+      "type": "string",
+      "default": "com.example",
+      "required": false,
+      "description": "Maven group ID"
+    },
+    {
+      "name": "ARTIFACT_ID",
+      "label": "Maven Artifact ID",
+      "type": "string",
+      "default": "stream-processor",
+      "required": false,
+      "description": "Maven artifact ID",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "BOOTSTRAP_SERVERS",
+      "label": "Kafka Bootstrap Servers",
+      "type": "string",
+      "default": "localhost:9092",
+      "required": false,
+      "description": "Comma-separated list of Kafka broker addresses"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

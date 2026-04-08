@@ -1,0 +1,4 @@
+{{CLI_NAME}}
+*.exe
+.env
+.DS_Store

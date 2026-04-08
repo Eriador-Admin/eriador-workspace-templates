@@ -1,0 +1,28 @@
+{
+  "id": "supabase",
+  "name": "Supabase Starter",
+  "description": "Supabase project with auth, Postgres database, realtime subscriptions, and file storage",
+  "version": "1.0.0",
+  "category": "baas",
+  "icon": "⚡",
+  "tech": ["TypeScript", "Supabase", "Express", "PostgreSQL", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["baas", "database", "auth"],
+  "tags": ["supabase", "postgres", "auth", "realtime", "storage", "baas"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-supabase-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

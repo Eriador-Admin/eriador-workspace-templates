@@ -1,0 +1,14 @@
+{
+  "name": "shared",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/src",
+  "targets": {
+    "build": {
+      "command": "echo 'Building shared'"
+    },
+    "lint": {
+      "command": "echo 'Linting shared'"
+    }
+  }
+}

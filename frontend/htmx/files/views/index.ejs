@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= title %></h1>
+
+    <div id="notifications"></div>
+
+    <!-- Create form -->
+    <form hx-post="/items" hx-target="#item-list" hx-swap="innerHTML" class="item-form">
+      <input type="text" name="name" placeholder="Item name" required>
+      <input type="text" name="description" placeholder="Description (optional)">
+      <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Items loaded via HTMX on page load -->
+    <div id="item-list" hx-get="/items" hx-trigger="load" hx-swap="innerHTML">
+      <p class="loading">Loading items...</p>
+    </div>
+  </div>
+</body>
+</html>

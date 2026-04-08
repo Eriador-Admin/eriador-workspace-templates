@@ -1,0 +1,35 @@
+{
+  "id": "flask",
+  "name": "Flask API",
+  "description": "Python REST API with Flask, Blueprints, SQLAlchemy ORM, and pytest testing",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🐍",
+  "tech": ["Python", "Flask", "SQLAlchemy"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["api", "rest", "python", "flask", "sqlalchemy"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 20,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-flask-api",
+      "required": true,
+      "description": "Name of the Flask application"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5000,
+      "required": false,
+      "description": "Port for the Flask dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

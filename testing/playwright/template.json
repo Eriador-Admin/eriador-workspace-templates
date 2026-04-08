@@ -1,0 +1,35 @@
+{
+  "id": "playwright",
+  "name": "Playwright E2E Tests",
+  "description": "End-to-end testing framework with Playwright, TypeScript, and page object model",
+  "version": "1.0.0",
+  "category": "testing",
+  "icon": "🎭",
+  "tech": ["Playwright", "TypeScript"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["playwright", "e2e", "testing", "typescript", "automation"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-e2e-tests",
+      "required": true,
+      "description": "Name of the test project"
+    },
+    {
+      "name": "BASE_URL",
+      "label": "Base URL",
+      "type": "string",
+      "default": "http://localhost:3000",
+      "required": false,
+      "description": "Base URL of the application under test"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

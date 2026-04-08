@@ -1,0 +1,9 @@
+{
+  "name": "shared",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'Build step for shared'",
+    "lint": "echo 'Lint step for shared'"
+  }
+}

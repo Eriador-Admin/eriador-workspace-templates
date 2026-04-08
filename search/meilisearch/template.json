@@ -1,0 +1,27 @@
+{
+  "id": "meilisearch",
+  "name": "Meilisearch",
+  "description": "Full-text search engine with Meilisearch, indexing pipeline, and search API",
+  "version": "1.0.0",
+  "category": "search",
+  "icon": "🔍",
+  "tech": ["TypeScript", "Meilisearch", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["meilisearch", "search", "full-text", "indexing", "api"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-search-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

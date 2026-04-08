@@ -1,0 +1,35 @@
+{
+  "id": "npm-package",
+  "name": "npm Package",
+  "description": "TypeScript npm package with Vitest testing, tsup bundling, and publish-ready configuration",
+  "version": "1.0.0",
+  "category": "library",
+  "icon": "📦",
+  "tech": ["TypeScript", "Node.js", "Vitest", "tsup"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["npm", "package", "library", "typescript", "open-source"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 10,
+  "variables": [
+    {
+      "name": "PACKAGE_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "my-package",
+      "required": true,
+      "description": "npm package name (scoped names like @scope/name are supported)"
+    },
+    {
+      "name": "PACKAGE_DESCRIPTION",
+      "label": "Package Description",
+      "type": "string",
+      "default": "A useful npm package",
+      "required": false,
+      "description": "Short description for package.json"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "grpc-service",
+  "name": "gRPC Service (Node.js)",
+  "description": "gRPC server and client with Protocol Buffers and Node.js",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🔌",
+  "tech": ["gRPC", "Protocol Buffers", "Node.js"],
+  "difficulty": "advanced",
+  "author": "Belfalas",
+  "tags": ["grpc", "protobuf", "rpc", "microservices", "backend"],
+  "access": "public",
+  "sort_order": 11,
+  "variables": [
+    {
+      "name": "SERVICE_NAME",
+      "label": "Service Name",
+      "type": "string",
+      "default": "my-grpc-service",
+      "required": true,
+      "description": "Name of the gRPC service"
+    },
+    {
+      "name": "GRPC_PORT",
+      "label": "gRPC Port",
+      "type": "number",
+      "default": 50051,
+      "required": false,
+      "description": "Port for the gRPC server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

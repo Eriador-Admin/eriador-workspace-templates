@@ -1,0 +1,27 @@
+{
+  "id": "caddy",
+  "name": "Caddy Web Server",
+  "description": "Caddy web server with automatic HTTPS, reverse proxy, load balancing, and file server",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "🔒",
+  "tech": ["Caddy", "Docker", "Docker Compose"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["caddy", "reverse-proxy", "automatic-https", "web-server", "load-balancer"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 8,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-caddy-stack",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -67,6 +67,49 @@ for category in */; do
         console.error('$dir/template.json description exceeds 200 chars');
         process.exit(1);
       }
+      if (t.categories) {
+        if (!Array.isArray(t.categories)) {
+          console.error('$dir/template.json categories must be an array');
+          process.exit(1);
+        }
+        const fs = require('fs');
+        if (t.categories.length === 0) {
+          console.error('$dir/template.json categories must not be empty');
+          process.exit(1);
+        }
+        if (t.categories[0] !== t.category) {
+          console.error('$dir/template.json categories[0] must match primary category:', t.category, 'got', t.categories[0]);
+          process.exit(1);
+        }
+        const seen = new Set();
+        for (const c of t.categories) {
+          if (typeof c !== 'string') {
+            console.error('$dir/template.json categories entries must be strings');
+            process.exit(1);
+          }
+          if (seen.has(c)) {
+            console.error('$dir/template.json categories has duplicate:', c);
+            process.exit(1);
+          }
+          seen.add(c);
+          if (!fs.existsSync(c + '/category.json')) {
+            console.error('$dir/template.json categories references unknown category:', c);
+            process.exit(1);
+          }
+        }
+      }
+      if (t.composes) {
+        if (!Array.isArray(t.composes)) {
+          console.error('$dir/template.json composes must be an array');
+          process.exit(1);
+        }
+        for (const cid of t.composes) {
+          if (typeof cid !== 'string') {
+            console.error('$dir/template.json composes entries must be strings');
+            process.exit(1);
+          }
+        }
+      }
     "; then ERRORS=$((ERRORS+1)); continue; fi
 
     # Must have files/ directory with at least one file
@@ -77,7 +120,12 @@ for category in */; do
     fi
 
     count=$(find "$dir/files" -type f | wc -l)
-    size=$(du -sb "$dir/files" | cut -f1)
+    # macOS du doesn't support -b; use find + stat for byte-accurate size
+    if du -sb /dev/null &>/dev/null; then
+      size=$(du -sb "$dir/files" | cut -f1)
+    else
+      size=$(find "$dir/files" -type f -exec stat -f%z {} + 2>/dev/null | awk '{s+=$1} END {print s+0}')
+    fi
 
     if [ "$count" -gt 200 ]; then
       echo "ERROR: $dir has $count files (max 200)"

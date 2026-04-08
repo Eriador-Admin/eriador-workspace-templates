@@ -1,0 +1,4 @@
+---
+app_name: "{{PROJECT_NAME}}"
+timezone: UTC
+ntp_enabled: true

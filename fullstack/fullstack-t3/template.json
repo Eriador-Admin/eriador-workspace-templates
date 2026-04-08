@@ -8,6 +8,7 @@
   "tech": ["Next.js", "tRPC", "Prisma", "Tailwind"],
   "difficulty": "intermediate",
   "author": "Belfalas",
+  "composes": ["nextjs", "prisma"],
   "tags": ["nextjs", "trpc", "prisma", "tailwind", "typescript", "fullstack"],
   "access": "free",
   "featured": true,

@@ -1,0 +1,27 @@
+{
+  "id": "deno-fresh",
+  "name": "Deno Fresh",
+  "description": "Full-stack web framework for Deno with islands architecture and zero-JS by default",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🦕",
+  "tech": ["TypeScript", "Deno", "Fresh", "Preact"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["deno", "fresh", "islands", "preact", "server-side"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 10,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-deno-fresh-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

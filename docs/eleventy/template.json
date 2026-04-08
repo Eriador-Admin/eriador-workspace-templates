@@ -1,0 +1,27 @@
+{
+  "id": "eleventy",
+  "name": "Eleventy Site",
+  "description": "Static site generator with Eleventy (11ty), Nunjucks templates, and Markdown content",
+  "version": "1.0.0",
+  "category": "docs",
+  "icon": "🎈",
+  "tech": ["JavaScript", "Eleventy", "Nunjucks", "Markdown"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["eleventy", "11ty", "ssg", "static-site", "nunjucks", "markdown"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 4,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-eleventy-site",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

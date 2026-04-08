@@ -1,0 +1,14 @@
+{
+  "name": "{{APP_NAME}}",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --port ${DEV_PORT:-4321}",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.15.0"
+  }
+}

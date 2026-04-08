@@ -1,0 +1,13 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "1.0.0",
+  "description": "Bun-native HTTP server",
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "start": "bun src/server.ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.0"
+  }
+}

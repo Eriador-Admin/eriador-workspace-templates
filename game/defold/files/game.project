@@ -1,0 +1,23 @@
+[project]
+title = {{PROJECT_NAME}}
+version = 1.0.0
+
+[display]
+width = 800
+height = 600
+clear_color_red = 0.08
+clear_color_green = 0.08
+clear_color_blue = 0.12
+
+[physics]
+type = 2D
+gravity_y = 0
+
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[input]
+game_binding = /input/game.input_bindingc
+
+[script]
+shared_state = 1

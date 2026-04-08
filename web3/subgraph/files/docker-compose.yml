@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  graph-node:
+    image: graphprotocol/graph-node:latest
+    ports:
+      - "8000:8000"   # GraphQL HTTP
+      - "8001:8001"   # GraphQL WS
+      - "8020:8020"   # Admin
+      - "8030:8030"   # Index status
+    depends_on:
+      - ipfs
+      - postgres
+    environment:
+      postgres_host: postgres
+      postgres_user: graph-node
+      postgres_pass: let-me-in
+      postgres_db: graph-node
+      ipfs: "ipfs:5001"
+      ethereum: "mainnet:${ETHEREUM_RPC:-http://host.docker.internal:8545}"
+      GRAPH_LOG: info
+
+  ipfs:
+    image: ipfs/kubo:v0.27.0
+    ports:
+      - "5001:5001"
+    volumes:
+      - ipfs_data:/data/ipfs
+
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: graph-node
+      POSTGRES_PASSWORD: let-me-in
+      POSTGRES_DB: graph-node
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  ipfs_data:
+  pg_data:

@@ -1,0 +1,28 @@
+{
+  "id": "bun-server",
+  "name": "Bun Server",
+  "description": "Bun-native HTTP server using Bun APIs for fast file serving, routing, and SQLite with zero dependencies",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🍞",
+  "tech": ["TypeScript", "Bun", "SQLite"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["api", "bun", "server", "sqlite", "fast", "zero-dep"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 16,
+  "prerequisites": ["Bun 1.0+"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-bun-server",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "subscriber": "tsx src/subscriber.ts",
+    "publisher": "tsx src/publisher.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mqtt": "^5.10.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
+  }
+}

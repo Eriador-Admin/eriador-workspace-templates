@@ -1,0 +1,13 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.0",
+    "dotenv": "^16.4.0"
+  }
+}

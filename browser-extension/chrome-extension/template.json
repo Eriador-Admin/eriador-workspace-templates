@@ -1,0 +1,35 @@
+{
+  "id": "chrome-extension",
+  "name": "Chrome Extension (Manifest V3)",
+  "description": "Chrome browser extension with Manifest V3, popup, content script, and service worker",
+  "version": "1.0.0",
+  "category": "browser-extension",
+  "icon": "🧩",
+  "tech": ["JavaScript", "Chrome APIs", "HTML/CSS"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["chrome", "extension", "browser", "manifest-v3", "popup"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "EXTENSION_NAME",
+      "label": "Extension Name",
+      "type": "string",
+      "default": "My Extension",
+      "required": true,
+      "description": "Display name of the Chrome extension"
+    },
+    {
+      "name": "EXTENSION_ID",
+      "label": "Extension ID",
+      "type": "string",
+      "default": "my-extension",
+      "required": true,
+      "description": "Short identifier (used for folder name)"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

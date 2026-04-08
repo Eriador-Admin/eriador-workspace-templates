@@ -1,0 +1,27 @@
+{
+  "id": "shopify-theme",
+  "name": "Shopify Theme",
+  "description": "Shopify theme with Liquid templates, sections, and Online Store 2.0 features",
+  "version": "1.0.0",
+  "category": "ecommerce",
+  "icon": "🛍️",
+  "tech": ["Liquid", "JavaScript", "CSS", "Shopify"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["shopify", "ecommerce", "theme", "liquid", "storefront"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Theme Name",
+      "type": "string",
+      "default": "my-shopify-theme",
+      "required": true,
+      "description": "Name of the Shopify theme"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

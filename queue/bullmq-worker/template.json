@@ -1,0 +1,36 @@
+{
+  "id": "bullmq-worker",
+  "name": "BullMQ Worker",
+  "description": "Background job processing with BullMQ, Redis, and a Bull Board dashboard",
+  "version": "1.0.0",
+  "category": "queue",
+  "icon": "🐂",
+  "tech": ["TypeScript", "BullMQ", "Redis", "Express", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["queue", "microservices"],
+  "tags": ["bullmq", "queue", "worker", "redis", "jobs"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-bullmq-worker",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dashboard Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the Bull Board UI"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

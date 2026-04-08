@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches: [{{DEPLOY_BRANCH}}]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js {{NODE_VERSION}}
+        uses: actions/setup-node@v4
+        with:
+          node-version: {{NODE_VERSION}}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        run: |
+          echo "Add your deployment commands here"
+          echo "Examples: rsync, scp, aws s3 sync, docker push, etc."

@@ -1,0 +1,14 @@
+.gradle/
+build/
+out/
+*.class
+*.jar
+*.war
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+local.properties
+.env
+.DS_Store

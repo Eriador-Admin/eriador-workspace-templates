@@ -1,0 +1,2 @@
+{"type":"index-pattern","id":"logs-*","attributes":{"title":"logs-*","timeFieldName":"@timestamp"},"references":[]}
+{"type":"index-pattern","id":"metrics-*","attributes":{"title":"metrics-*","timeFieldName":"@timestamp"},"references":[]}

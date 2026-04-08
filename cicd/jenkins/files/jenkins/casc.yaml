@@ -1,0 +1,16 @@
+jenkins:
+  systemMessage: "{{PROJECT_NAME}} — Jenkins configured via JCasC"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  numExecutors: 2
+
+unclassified:
+  location:
+    url: "http://localhost:8080/"

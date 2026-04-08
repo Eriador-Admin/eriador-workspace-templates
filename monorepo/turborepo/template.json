@@ -1,0 +1,35 @@
+{
+  "id": "turborepo",
+  "name": "Turborepo Monorepo",
+  "description": "Multi-package monorepo with Turborepo, shared packages, and app workspaces",
+  "version": "1.0.0",
+  "category": "monorepo",
+  "icon": "🔀",
+  "tech": ["TypeScript", "Turborepo", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["monorepo", "turborepo", "typescript", "npm-workspaces"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-monorepo",
+      "required": true,
+      "description": "Name of the monorepo"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Web App Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the web app"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

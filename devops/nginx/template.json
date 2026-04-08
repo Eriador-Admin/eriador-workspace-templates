@@ -1,0 +1,27 @@
+{
+  "id": "nginx",
+  "name": "Nginx Reverse Proxy",
+  "description": "Nginx web server with reverse proxy, load balancing, SSL termination, and static file serving",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "🟢",
+  "tech": ["Nginx", "Docker", "Docker Compose"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["nginx", "reverse-proxy", "load-balancer", "web-server", "ssl"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 7,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-nginx-stack",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

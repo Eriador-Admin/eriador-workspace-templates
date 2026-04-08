@@ -1,0 +1,28 @@
+{
+  "id": "cloudflare-workers",
+  "name": "Cloudflare Workers",
+  "description": "Cloudflare Workers edge application with KV storage, routing, and Wrangler dev tooling",
+  "version": "1.0.0",
+  "category": "edge",
+  "icon": "🌐",
+  "tech": ["TypeScript", "Cloudflare Workers", "Wrangler"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["edge", "serverless"],
+  "tags": ["cloudflare", "workers", "edge", "kv", "serverless"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-cf-worker",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

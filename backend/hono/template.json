@@ -1,0 +1,29 @@
+{
+  "id": "hono",
+  "name": "Hono API",
+  "description": "Lightweight, ultrafast Hono web framework API with middleware, validation, and multi-runtime support",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🔥",
+  "tech": ["TypeScript", "Hono", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["backend", "edge"],
+  "tags": ["api", "hono", "web-framework", "lightweight", "edge-ready"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 15,
+  "prerequisites": ["Node.js 18+"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-hono-api",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

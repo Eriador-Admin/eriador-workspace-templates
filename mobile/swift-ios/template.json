@@ -1,0 +1,43 @@
+{
+  "id": "swift-ios",
+  "name": "Swift iOS App",
+  "description": "Native iOS application with SwiftUI, MVVM architecture, and Swift Package Manager",
+  "version": "1.0.0",
+  "category": "mobile",
+  "icon": "🍎",
+  "tech": ["Swift", "SwiftUI", "Xcode"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["ios", "apple", "swift", "swiftui", "mobile", "native"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 30,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "MyApp",
+      "required": true,
+      "description": "Name of the iOS application (PascalCase, no spaces)"
+    },
+    {
+      "name": "BUNDLE_ID",
+      "label": "Bundle Identifier",
+      "type": "string",
+      "default": "com.example.myapp",
+      "required": true,
+      "description": "Reverse-domain bundle identifier"
+    },
+    {
+      "name": "MIN_IOS_VERSION",
+      "label": "Minimum iOS Version",
+      "type": "string",
+      "default": "17.0",
+      "required": false,
+      "description": "Minimum iOS deployment target"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

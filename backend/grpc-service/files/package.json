@@ -1,0 +1,13 @@
+{
+  "name": "{{SERVICE_NAME}}",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "client": "node src/client.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.0",
+    "@grpc/proto-loader": "^0.7.0"
+  }
+}

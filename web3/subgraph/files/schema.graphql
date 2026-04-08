@@ -1,0 +1,16 @@
+type Counter @entity {
+  id: ID!
+  currentNumber: BigInt!
+  totalChanges: BigInt!
+  lastUpdatedAt: BigInt!
+  lastTransactionHash: Bytes!
+}
+
+type NumberChanged @entity(immutable: true) {
+  id: ID!
+  oldNumber: BigInt!
+  newNumber: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

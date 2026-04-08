@@ -1,0 +1,26 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "worker": "tsx src/worker.ts",
+    "dashboard": "tsx src/dashboard.ts",
+    "produce": "tsx src/producer.ts",
+    "dev": "concurrently \"npm:worker\" \"npm:dashboard\""
+  },
+  "dependencies": {
+    "bullmq": "^5.12.0",
+    "@bull-board/express": "^5.21.0",
+    "@bull-board/api": "^5.21.0",
+    "express": "^4.21.0",
+    "dotenv": "^16.4.0",
+    "ioredis": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^20.14.0",
+    "concurrently": "^8.2.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

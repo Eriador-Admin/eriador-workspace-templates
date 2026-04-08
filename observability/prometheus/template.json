@@ -1,0 +1,27 @@
+{
+  "id": "prometheus",
+  "name": "Prometheus Metrics",
+  "description": "Application metrics with Prometheus, prom-client, Express exporter, and Grafana dashboards",
+  "version": "1.0.0",
+  "category": "observability",
+  "icon": "🔥",
+  "tech": ["TypeScript", "Prometheus", "Grafana", "Express", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["prometheus", "grafana", "metrics", "monitoring", "observability"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-metrics",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

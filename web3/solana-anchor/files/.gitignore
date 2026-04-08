@@ -1,0 +1,8 @@
+target/
+node_modules/
+.anchor/
+app/node_modules/
+app/dist/
+.env
+.DS_Store
+test-ledger/

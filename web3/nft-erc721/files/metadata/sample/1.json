@@ -1,0 +1,9 @@
+{
+  "name": "Token #1",
+  "description": "First token in the collection",
+  "image": "ipfs://QmImageCID/1.png",
+  "attributes": [
+    { "trait_type": "Background", "value": "Blue" },
+    { "trait_type": "Rarity", "value": "Common" }
+  ]
+}

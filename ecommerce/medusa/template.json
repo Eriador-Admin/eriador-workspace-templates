@@ -1,0 +1,27 @@
+{
+  "id": "medusa",
+  "name": "Medusa Ecommerce",
+  "description": "Open-source headless commerce engine with Medusa.js, products API, and admin dashboard",
+  "version": "1.0.0",
+  "category": "ecommerce",
+  "icon": "🛒",
+  "tech": ["TypeScript", "Medusa.js", "Node.js", "Express"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["ecommerce", "medusa", "headless-commerce", "store", "api"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-medusa-store",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

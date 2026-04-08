@@ -1,0 +1,27 @@
+{
+  "id": "tensorflow",
+  "name": "TensorFlow Training",
+  "description": "TensorFlow/Keras model training pipeline with MNIST classification example",
+  "version": "1.0.0",
+  "category": "ml",
+  "icon": "🧠",
+  "tech": ["Python", "TensorFlow", "Keras"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["tensorflow", "keras", "deep-learning", "training", "mnist"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 4,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-tensorflow-project",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

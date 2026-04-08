@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  gateway:
+    image: nginx:alpine
+    ports:
+      - "{{GATEWAY_PORT}}:80"
+    volumes:
+      - ./gateway/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - users-service
+      - products-service
+    networks:
+      - app-network
+
+  users-service:
+    build: ./services/users
+    expose:
+      - "3001"
+    environment:
+      - PORT=3001
+      - SERVICE_NAME=users
+    networks:
+      - app-network
+
+  products-service:
+    build: ./services/products
+    expose:
+      - "3002"
+    environment:
+      - PORT=3002
+      - SERVICE_NAME=products
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

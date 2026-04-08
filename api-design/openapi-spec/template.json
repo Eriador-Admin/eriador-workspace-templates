@@ -1,0 +1,35 @@
+{
+  "id": "openapi-spec",
+  "name": "OpenAPI Spec-First",
+  "description": "API design-first workflow with OpenAPI 3.1 spec, Swagger UI, and code generation",
+  "version": "1.0.0",
+  "category": "api-design",
+  "icon": "📐",
+  "tech": ["OpenAPI", "YAML", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["openapi", "swagger", "api-design", "spec-first", "rest"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "API Name",
+      "type": "string",
+      "default": "my-api",
+      "required": true,
+      "description": "Name of the API"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Swagger UI Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for the Swagger UI server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

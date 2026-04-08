@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Test Client</title>
+  <style>
+    body { font-family: monospace; max-width: 600px; margin: 2rem auto; }
+    #log { background: #111; color: #0f0; padding: 1rem; height: 300px; overflow-y: auto; font-size: 13px; }
+    input, button { padding: 0.4rem 0.6rem; margin: 0.2rem; }
+    .controls { margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <h2>WebSocket Test Client</h2>
+  <div class="controls">
+    <button onclick="connect()">Connect</button>
+    <button onclick="disconnect()">Disconnect</button>
+  </div>
+  <div class="controls">
+    <input id="room" placeholder="Room name" value="general">
+    <button onclick="joinRoom()">Join</button>
+    <button onclick="leaveRoom()">Leave</button>
+  </div>
+  <div class="controls">
+    <input id="msg" placeholder="Message" style="width:300px">
+    <button onclick="sendMsg()">Send</button>
+  </div>
+  <div id="log"></div>
+
+  <script>
+    let ws;
+    const logEl = document.getElementById('log');
+    function appendLog(text) {
+      logEl.textContent += text + '\n';
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+    function connect() {
+      ws = new WebSocket('ws://localhost:8080');
+      ws.onopen = () => appendLog('Connected');
+      ws.onclose = (e) => appendLog(`Disconnected (code: ${e.code})`);
+      ws.onmessage = (e) => appendLog('< ' + e.data);
+      ws.onerror = (e) => appendLog('Error');
+    }
+    function disconnect() { if (ws) ws.close(); }
+    function joinRoom() {
+      const room = document.getElementById('room').value;
+      ws.send(JSON.stringify({ type: 'join', room }));
+    }
+    function leaveRoom() {
+      const room = document.getElementById('room').value;
+      ws.send(JSON.stringify({ type: 'leave', room }));
+    }
+    function sendMsg() {
+      const room = document.getElementById('room').value;
+      const data = document.getElementById('msg').value;
+      ws.send(JSON.stringify({ type: 'message', room, data }));
+      appendLog('> ' + data);
+      document.getElementById('msg').value = '';
+    }
+  </script>
+</body>
+</html>

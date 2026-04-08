@@ -1,0 +1,29 @@
+{
+  "id": "grafana",
+  "name": "Grafana Dashboard",
+  "description": "Standalone Grafana setup with provisioned datasources, dashboards, and Docker Compose",
+  "version": "1.0.0",
+  "category": "observability",
+  "icon": "📈",
+  "tech": ["Grafana", "Docker"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["observability", "data"],
+  "tags": ["grafana", "dashboard", "visualization", "monitoring", "metrics"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 6,
+  "prerequisites": ["Docker & Docker Compose"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-grafana",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

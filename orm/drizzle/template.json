@@ -1,0 +1,27 @@
+{
+  "id": "drizzle",
+  "name": "Drizzle ORM",
+  "description": "Lightweight TypeScript ORM with Drizzle, SQL-like query builder, migrations, and Express API",
+  "version": "1.0.0",
+  "category": "orm",
+  "icon": "💧",
+  "tech": ["TypeScript", "Drizzle ORM", "PostgreSQL", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["drizzle", "orm", "postgres", "database", "migrations", "sql"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-drizzle-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

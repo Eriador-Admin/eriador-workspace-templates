@@ -1,0 +1,31 @@
+{
+  "id": "apache-airflow",
+  "name": "Apache Airflow",
+  "description": "Workflow orchestration with Apache Airflow DAGs and Docker Compose.",
+  "version": "1.0.0",
+  "category": "big-data",
+  "icon": "🌊",
+  "tech": ["Apache Airflow", "Python", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["airflow", "workflow", "orchestration", "dag", "etl", "scheduling"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 50,
+  "prerequisites": ["python >= 3.9", "docker"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run bash init.sh", "Run bash run.sh"],
+  "variables": [
+    {
+      "name": "AIRFLOW_PORT",
+      "label": "Airflow Webserver Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for the Airflow web UI"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

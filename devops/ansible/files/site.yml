@@ -1,0 +1,15 @@
+---
+- name: Configure {{PROJECT_NAME}} infrastructure
+  hosts: all
+  become: true
+
+  roles:
+    - common
+
+- name: Configure web servers
+  hosts: webservers
+  become: true
+  tags: [webserver]
+
+  roles:
+    - webserver

@@ -1,0 +1,27 @@
+{
+  "id": "ansible",
+  "name": "Ansible Playbooks",
+  "description": "Infrastructure automation with Ansible playbooks, roles, and inventory management",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "🔧",
+  "tech": ["Ansible", "YAML", "Python"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["ansible", "automation", "configuration-management", "devops", "infrastructure"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 4,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-ansible-project",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

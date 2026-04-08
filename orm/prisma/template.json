@@ -1,0 +1,27 @@
+{
+  "id": "prisma",
+  "name": "Prisma ORM",
+  "description": "Type-safe database toolkit with Prisma ORM, schema-driven migrations, and Express API",
+  "version": "1.0.0",
+  "category": "orm",
+  "icon": "🔷",
+  "tech": ["TypeScript", "Prisma", "PostgreSQL", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["prisma", "orm", "postgres", "database", "migrations", "type-safe"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-prisma-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

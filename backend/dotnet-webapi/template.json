@@ -1,0 +1,35 @@
+{
+  "id": "dotnet-webapi",
+  "name": ".NET Web API",
+  "description": "ASP.NET Core Web API with Entity Framework Core, Swagger, and xUnit testing",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🔷",
+  "tech": ["C#", ".NET", "ASP.NET Core", "Entity Framework"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["api", "rest", "dotnet", "csharp", "aspnet", "ef-core"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 30,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "MyWebApi",
+      "required": true,
+      "description": "Name of the .NET project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5000,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

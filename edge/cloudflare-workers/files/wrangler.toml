@@ -1,0 +1,8 @@
+name = "{{PROJECT_NAME}}"
+main = "src/index.ts"
+compatibility_date = "2024-07-25"
+
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "placeholder-id"
+preview_id = "placeholder-preview-id"

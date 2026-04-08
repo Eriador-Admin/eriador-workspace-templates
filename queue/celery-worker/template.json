@@ -1,0 +1,35 @@
+{
+  "id": "celery-worker",
+  "name": "Celery Worker",
+  "description": "Python Celery task queue with Redis broker and Flower monitoring dashboard",
+  "version": "1.0.0",
+  "category": "queue",
+  "icon": "🌿",
+  "tech": ["Python", "Celery", "Redis", "Flower"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["celery", "queue", "worker", "python", "redis"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-celery-worker",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Flower Port",
+      "type": "number",
+      "default": 5555,
+      "required": false,
+      "description": "Port for the Flower monitoring UI"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

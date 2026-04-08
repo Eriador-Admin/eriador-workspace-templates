@@ -1,0 +1,42 @@
+{
+  "id": "nestjs-microservice",
+  "name": "NestJS Microservice",
+  "description": "NestJS microservice with TCP transport, modular architecture, and TypeScript",
+  "version": "1.0.0",
+  "category": "microservices",
+  "icon": "🐈",
+  "tech": ["NestJS", "TypeScript", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["nestjs", "microservices", "typescript", "tcp", "node"],
+  "access": "public",
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "SERVICE_NAME",
+      "label": "Service Name",
+      "type": "string",
+      "default": "my-nest-service",
+      "required": true,
+      "description": "Name of the NestJS microservice"
+    },
+    {
+      "name": "HTTP_PORT",
+      "label": "HTTP Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the HTTP API"
+    },
+    {
+      "name": "TCP_PORT",
+      "label": "TCP Transport Port",
+      "type": "number",
+      "default": 3001,
+      "required": false,
+      "description": "Port for the TCP microservice transport"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

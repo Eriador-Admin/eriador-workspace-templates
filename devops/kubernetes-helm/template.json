@@ -1,0 +1,44 @@
+{
+  "id": "kubernetes-helm",
+  "name": "Kubernetes Helm Chart",
+  "description": "Helm chart for deploying applications to Kubernetes with configurable values and templates",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "☸️",
+  "tech": ["Kubernetes", "Helm", "YAML"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["devops", "microservices"],
+  "tags": ["k8s", "helm", "containers", "orchestration", "deployment"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 20,
+  "variables": [
+    {
+      "name": "CHART_NAME",
+      "label": "Chart Name",
+      "type": "string",
+      "default": "my-app",
+      "required": true,
+      "description": "Name of the Helm chart"
+    },
+    {
+      "name": "APP_PORT",
+      "label": "Application Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port the application listens on"
+    },
+    {
+      "name": "REPLICA_COUNT",
+      "label": "Replica Count",
+      "type": "number",
+      "default": 2,
+      "required": false,
+      "description": "Default number of pod replicas"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

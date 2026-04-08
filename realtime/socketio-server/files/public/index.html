@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{PROJECT_NAME}} — Chat Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; display: flex; height: 100vh; }
+    #sidebar { width: 220px; background: #1e293b; color: #fff; padding: 1rem; }
+    #sidebar h2 { margin-bottom: 1rem; font-size: 1rem; }
+    #sidebar input, #sidebar button { width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: none; border-radius: 4px; }
+    #sidebar button { background: #3b82f6; color: #fff; cursor: pointer; }
+    #main { flex: 1; display: flex; flex-direction: column; }
+    #messages { flex: 1; overflow-y: auto; padding: 1rem; }
+    .msg { margin-bottom: 0.5rem; padding: 0.5rem; background: #f1f5f9; border-radius: 4px; }
+    .msg .meta { font-size: 0.75rem; color: #64748b; }
+    #form { display: flex; padding: 1rem; gap: 0.5rem; border-top: 1px solid #e2e8f0; }
+    #form input { flex: 1; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 4px; }
+    #form button { padding: 0.5rem 1rem; background: #3b82f6; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Rooms</h2>
+    <input id="room-input" placeholder="Room name" value="general" />
+    <button id="join-btn">Join Room</button>
+    <div id="current-room">Not in a room</div>
+  </div>
+  <div id="main">
+    <div id="messages"></div>
+    <form id="form">
+      <input id="msg-input" placeholder="Type a message..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    let currentRoom = null;
+    const messages = document.getElementById("messages");
+
+    document.getElementById("join-btn").addEventListener("click", () => {
+      const room = document.getElementById("room-input").value.trim();
+      if (!room) return;
+      if (currentRoom) socket.emit("leave-room", currentRoom);
+      socket.emit("join-room", room);
+      currentRoom = room;
+      document.getElementById("current-room").textContent = "Room: " + room;
+      messages.innerHTML = "";
+    });
+
+    document.getElementById("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("msg-input");
+      const message = input.value.trim();
+      if (!message || !currentRoom) return;
+      socket.emit("chat-message", { room: currentRoom, message });
+      input.value = "";
+    });
+
+    socket.on("message", (data) => {
+      const div = document.createElement("div");
+      div.className = "msg";
+      div.innerHTML = `<span class="meta">${data.id} · ${data.timestamp}</span><p>${escapeHtml(data.message)}</p>`;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    });
+
+    socket.on("user-connected", (data) => {
+      addSystem(data.id + " joined " + data.room);
+    });
+
+    socket.on("user-disconnected", (data) => {
+      addSystem(data.id + " left");
+    });
+
+    function addSystem(text) {
+      const div = document.createElement("div");
+      div.className = "msg";
+      div.style.fontStyle = "italic";
+      div.style.color = "#64748b";
+      div.textContent = text;
+      messages.appendChild(div);
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>

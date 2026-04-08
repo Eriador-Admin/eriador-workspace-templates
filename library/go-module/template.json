@@ -1,0 +1,27 @@
+{
+  "id": "go-module",
+  "name": "Go Module",
+  "description": "Go library module with packages, tests, and benchmarks",
+  "version": "1.0.0",
+  "category": "library",
+  "icon": "🐹",
+  "tech": ["Go"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["go", "golang", "module", "library"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 4,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Module Name",
+      "type": "string",
+      "default": "my-go-module",
+      "required": true,
+      "description": "Name of the Go module"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

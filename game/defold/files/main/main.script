@@ -1,0 +1,25 @@
+-- Main controller script for {{PROJECT_NAME}}
+-- Spawns enemies on a timer, tracks score
+
+local SPAWN_INTERVAL = 1.5
+
+function init(self)
+    self.spawn_timer = 0
+    self.score = 0
+end
+
+function update(self, dt)
+    self.spawn_timer = self.spawn_timer + dt
+    if self.spawn_timer >= SPAWN_INTERVAL then
+        self.spawn_timer = 0
+        local x = math.random(30, 770)
+        local pos = vmath.vector3(x, 620, 0)
+        factory.create("#enemy_factory", pos)
+    end
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("score") then
+        self.score = self.score + (message.points or 10)
+    end
+end

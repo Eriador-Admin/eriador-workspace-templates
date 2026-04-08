@@ -1,0 +1,42 @@
+{
+  "id": "google-cloud-functions",
+  "name": "Google Cloud Functions",
+  "description": "Serverless HTTP function with Google Cloud Functions and Functions Framework",
+  "version": "1.0.0",
+  "category": "serverless",
+  "icon": "☁️",
+  "tech": ["Node.js", "Google Cloud Functions"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["gcp", "cloud-functions", "serverless", "google-cloud"],
+  "access": "public",
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "FUNCTION_NAME",
+      "label": "Function Name",
+      "type": "string",
+      "default": "my-cloud-function",
+      "required": true,
+      "description": "Name of the Cloud Function"
+    },
+    {
+      "name": "GCP_REGION",
+      "label": "GCP Region",
+      "type": "string",
+      "default": "us-central1",
+      "required": false,
+      "description": "Google Cloud region for deployment"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Local Dev Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for local functions framework"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

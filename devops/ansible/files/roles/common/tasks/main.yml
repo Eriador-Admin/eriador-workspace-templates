@@ -1,0 +1,27 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+  when: ansible_os_family == "Debian"
+
+- name: Install base packages
+  package:
+    name:
+      - curl
+      - wget
+      - git
+      - htop
+      - vim
+    state: present
+
+- name: Set timezone
+  timezone:
+    name: "{{ timezone }}"
+
+- name: Ensure NTP is running
+  service:
+    name: ntp
+    state: started
+    enabled: yes
+  when: ntp_enabled
