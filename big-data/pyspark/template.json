@@ -1,0 +1,40 @@
+{
+  "id": "pyspark",
+  "name": "PySpark",
+  "description": "Apache Spark application with PySpark for distributed data processing.",
+  "version": "1.0.0",
+  "category": "big-data",
+  "icon": "⚡",
+  "tech": ["Apache Spark", "PySpark", "Python"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["spark", "pyspark", "etl", "data-processing", "distributed"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 10,
+  "prerequisites": ["python >= 3.9", "java >= 11"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run bash init.sh", "Run bash run.sh"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-spark-app",
+      "required": false,
+      "description": "Name for the Spark application",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "SPARK_MASTER",
+      "label": "Spark Master URL",
+      "type": "string",
+      "default": "local[*]",
+      "required": false,
+      "description": "Spark master URL (local[*] for local mode, spark://host:7077 for cluster)"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

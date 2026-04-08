@@ -1,0 +1,35 @@
+{
+  "id": "socketio-server",
+  "name": "Socket.io Server",
+  "description": "Real-time WebSocket server with Socket.io, rooms, and event broadcasting",
+  "version": "1.0.0",
+  "category": "realtime",
+  "icon": "🔌",
+  "tech": ["JavaScript", "Socket.io", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["websocket", "realtime", "socket.io", "chat", "events"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-socketio-server",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

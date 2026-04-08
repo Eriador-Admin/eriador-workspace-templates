@@ -1,0 +1,13 @@
+baseURL = 'http://localhost:{{DEV_PORT}}/'
+languageCode = 'en-us'
+title = '{{PROJECT_NAME}}'
+theme = 'ananke'
+
+[params]
+  description = 'Documentation site built with Hugo'
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    style = 'monokai'

@@ -1,0 +1,40 @@
+{
+  "id": "svelte-kit",
+  "name": "SvelteKit",
+  "description": "Full-stack Svelte app with SvelteKit, file-based routing, and SSR.",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "🔥",
+  "tech": ["Svelte", "SvelteKit", "Vite"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["svelte", "sveltekit", "ssr", "spa", "vite"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 20,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "svelte-kit-app",
+      "required": false,
+      "description": "Name for the project in package.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Vite dev server port"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

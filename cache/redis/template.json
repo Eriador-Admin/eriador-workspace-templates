@@ -1,0 +1,28 @@
+{
+  "id": "redis",
+  "name": "Redis Patterns",
+  "description": "Redis caching, pub/sub messaging, session store, and rate limiting patterns with Node.js",
+  "version": "1.0.0",
+  "category": "cache",
+  "icon": "⚡",
+  "tech": ["TypeScript", "Redis", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["cache", "database", "realtime"],
+  "tags": ["redis", "cache", "pubsub", "session", "rate-limit"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-redis-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

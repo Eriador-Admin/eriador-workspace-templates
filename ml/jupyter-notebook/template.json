@@ -1,0 +1,35 @@
+{
+  "id": "jupyter-notebook",
+  "name": "Jupyter Notebook",
+  "description": "Data science workspace with Jupyter notebooks, pandas, matplotlib, and scikit-learn",
+  "version": "1.0.0",
+  "category": "ml",
+  "icon": "📓",
+  "tech": ["Python", "Jupyter", "pandas", "scikit-learn", "matplotlib"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["data-science", "jupyter", "notebook", "analysis", "visualization"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 20,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-notebook",
+      "required": true,
+      "description": "Name of the notebook project"
+    },
+    {
+      "name": "JUPYTER_PORT",
+      "label": "Jupyter Port",
+      "type": "number",
+      "default": 8888,
+      "required": false,
+      "description": "Port for the Jupyter server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "rabbitmq-consumer",
+  "name": "RabbitMQ Consumer",
+  "description": "Message queue consumer service with RabbitMQ, Node.js, and Docker Compose",
+  "version": "1.0.0",
+  "category": "microservices",
+  "icon": "🐰",
+  "tech": ["Node.js", "RabbitMQ", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["rabbitmq", "message-queue", "microservices", "amqp", "consumer"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Service Name",
+      "type": "string",
+      "default": "my-consumer",
+      "required": true,
+      "description": "Name of the consumer service"
+    },
+    {
+      "name": "RABBITMQ_PORT",
+      "label": "RabbitMQ Port",
+      "type": "number",
+      "default": 5672,
+      "required": false,
+      "description": "Port for RabbitMQ AMQP"
+    },
+    {
+      "name": "RABBITMQ_MGMT_PORT",
+      "label": "Management UI Port",
+      "type": "number",
+      "default": 15672,
+      "required": false,
+      "description": "Port for RabbitMQ management UI"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

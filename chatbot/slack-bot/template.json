@@ -1,0 +1,35 @@
+{
+  "id": "slack-bot",
+  "name": "Slack Bot",
+  "description": "Slack bot with Bolt for JavaScript, slash commands, and event subscriptions",
+  "version": "1.0.0",
+  "category": "chatbot",
+  "icon": "💬",
+  "tech": ["JavaScript", "Slack Bolt", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["slack", "bot", "chatbot", "bolt", "slash-commands"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Bot Name",
+      "type": "string",
+      "default": "my-slack-bot",
+      "required": true,
+      "description": "Name of the Slack bot"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the Bolt app"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

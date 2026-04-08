@@ -1,0 +1,35 @@
+{
+  "id": "rust-crate",
+  "name": "Rust Crate",
+  "description": "Rust library crate with tests, documentation, and CI-ready structure",
+  "version": "1.0.0",
+  "category": "library",
+  "icon": "🦀",
+  "tech": ["Rust", "Cargo"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["rust", "crate", "library", "cargo"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Crate Name",
+      "type": "string",
+      "default": "my-rust-crate",
+      "required": true,
+      "description": "Name of the Rust crate (use hyphens)"
+    },
+    {
+      "name": "AUTHOR",
+      "label": "Author",
+      "type": "string",
+      "default": "Your Name",
+      "required": false,
+      "description": "Crate author name"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

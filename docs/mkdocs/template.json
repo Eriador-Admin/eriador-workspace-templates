@@ -1,0 +1,35 @@
+{
+  "id": "mkdocs",
+  "name": "MkDocs Material",
+  "description": "Python-powered documentation site using MkDocs with the Material theme",
+  "version": "1.0.0",
+  "category": "docs",
+  "icon": "📘",
+  "tech": ["Python", "MkDocs", "Markdown"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["docs", "documentation", "mkdocs", "material", "python", "markdown"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-docs",
+      "required": true,
+      "description": "Name of the documentation site"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Port",
+      "type": "number",
+      "default": 8000,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "private": true,
+  "workspaces": ["apps/*", "libs/*"],
+  "scripts": {
+    "build": "nx run-many -t build",
+    "lint": "nx run-many -t lint",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "nx": "^19.0.0",
+    "typescript": "^5.5.0"
+  }
+}

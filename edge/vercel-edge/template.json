@@ -1,0 +1,29 @@
+{
+  "id": "vercel-edge",
+  "name": "Vercel Edge Functions",
+  "description": "Vercel Edge Functions with TypeScript for low-latency APIs, middleware, and dynamic content at the edge",
+  "version": "1.0.0",
+  "category": "edge",
+  "icon": "▲",
+  "tech": ["TypeScript", "Vercel", "Edge Functions", "Next.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["edge", "serverless", "frontend"],
+  "tags": ["edge", "vercel", "serverless", "middleware", "next.js"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "prerequisites": ["Node.js 18+", "Vercel CLI (optional)"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-vercel-edge",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

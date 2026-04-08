@@ -1,0 +1,27 @@
+{
+  "id": "raspberry-pi",
+  "name": "Raspberry Pi Python",
+  "description": "Raspberry Pi project with Python, GPIO control, and sensor reading",
+  "version": "1.0.0",
+  "category": "iot",
+  "icon": "🍓",
+  "tech": ["Python", "Raspberry Pi", "GPIO"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["raspberry-pi", "iot", "python", "gpio", "sensors"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-rpi-project",
+      "required": true,
+      "description": "Name of the Raspberry Pi project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

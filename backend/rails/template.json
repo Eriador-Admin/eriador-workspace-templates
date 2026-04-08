@@ -1,0 +1,43 @@
+{
+  "id": "rails",
+  "name": "Ruby on Rails API",
+  "description": "Rails API-only application with ActiveRecord, RSpec testing, and JSON serialization",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "💎",
+  "tech": ["Ruby", "Rails", "ActiveRecord"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["api", "rest", "ruby", "rails", "activerecord"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 25,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-rails-api",
+      "required": true,
+      "description": "Name of the Rails application"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the Rails dev server"
+    },
+    {
+      "name": "RUBY_VERSION",
+      "label": "Ruby Version",
+      "type": "string",
+      "default": "3.3.0",
+      "required": false,
+      "description": "Ruby version to use"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

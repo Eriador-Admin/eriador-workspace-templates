@@ -1,0 +1,27 @@
+{
+  "id": "puppeteer-scraper",
+  "name": "Puppeteer Scraper",
+  "description": "Web scraper with Puppeteer for headless Chrome, page crawling, and data extraction",
+  "version": "1.0.0",
+  "category": "scraping",
+  "icon": "🕷️",
+  "tech": ["TypeScript", "Puppeteer", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["puppeteer", "scraping", "crawler", "headless", "chrome"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-scraper",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

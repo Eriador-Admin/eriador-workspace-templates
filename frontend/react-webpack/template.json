@@ -1,0 +1,48 @@
+{
+  "id": "react-webpack",
+  "name": "React + Webpack",
+  "description": "React app with Webpack 5, Babel, and Tailwind CSS.",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "⚛️",
+  "tech": ["React", "Webpack", "Babel", "Tailwind CSS"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["react", "webpack", "babel", "tailwind", "spa"],
+  "access": "free",
+  "featured": true,
+  "sort_order": 15,
+  "prerequisites": ["node >= 18"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run npm install", "Run npm run dev"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "react-webpack-app",
+      "required": false,
+      "description": "Name for the project in package.json",
+      "validation": "^[a-z][a-z0-9-]*$"
+    },
+    {
+      "name": "APP_TITLE",
+      "label": "App Title",
+      "type": "string",
+      "default": "My React App",
+      "required": false,
+      "description": "Title displayed in the browser tab"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Webpack dev server port"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

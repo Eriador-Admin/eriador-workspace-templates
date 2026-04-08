@@ -8,6 +8,7 @@
   "tech": ["Flask", "scikit-learn"],
   "difficulty": "intermediate",
   "author": "Belfalas",
+  "categories": ["ml", "backend", "ai"],
   "tags": ["flask", "python", "ml", "scikit-learn", "machine-learning"],
   "access": "free",
   "featured": false,

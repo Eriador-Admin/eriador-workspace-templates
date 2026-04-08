@@ -1,0 +1,35 @@
+{
+  "id": "hugo",
+  "name": "Hugo Static Site",
+  "description": "Fast static site generator with Hugo and a documentation theme",
+  "version": "1.0.0",
+  "category": "docs",
+  "icon": "📄",
+  "tech": ["Go", "Hugo", "Markdown"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["docs", "documentation", "hugo", "static-site", "go"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-site",
+      "required": true,
+      "description": "Name of the Hugo site"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Port",
+      "type": "number",
+      "default": 1313,
+      "required": false,
+      "description": "Port for the Hugo dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

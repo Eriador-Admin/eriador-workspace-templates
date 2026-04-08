@@ -1,0 +1,43 @@
+{
+  "id": "github-actions",
+  "name": "GitHub Actions CI/CD",
+  "description": "GitHub Actions workflows for CI/CD with build, test, lint, and deploy pipelines",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "⚙️",
+  "tech": ["GitHub Actions", "YAML"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["ci", "cd", "github", "automation", "pipeline"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 30,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-project",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "NODE_VERSION",
+      "label": "Node.js Version",
+      "type": "string",
+      "default": "20",
+      "required": false,
+      "description": "Node.js version for CI"
+    },
+    {
+      "name": "DEPLOY_BRANCH",
+      "label": "Deploy Branch",
+      "type": "string",
+      "default": "main",
+      "required": false,
+      "description": "Branch that triggers deployment"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

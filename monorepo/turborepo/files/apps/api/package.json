@@ -1,0 +1,13 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node src/index.js",
+    "build": "echo 'Build step for api'",
+    "lint": "echo 'Lint step for api'"
+  },
+  "dependencies": {
+    "shared": "*"
+  }
+}

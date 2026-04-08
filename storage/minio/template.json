@@ -1,0 +1,27 @@
+{
+  "id": "minio",
+  "name": "MinIO Object Storage",
+  "description": "S3-compatible object storage with MinIO, file uploads, presigned URLs, and bucket management",
+  "version": "1.0.0",
+  "category": "storage",
+  "icon": "🗄️",
+  "tech": ["TypeScript", "MinIO", "Express", "Docker", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["minio", "s3", "object-storage", "file-upload", "presigned-url"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-minio-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

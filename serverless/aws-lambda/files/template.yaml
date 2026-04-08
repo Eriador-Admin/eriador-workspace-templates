@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: {{FUNCTION_NAME}} — Serverless API
+
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: {{RUNTIME}}
+    MemorySize: 128
+
+Resources:
+  HelloFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/hello.handler
+      Description: Hello world function
+      Events:
+        HelloApi:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+Outputs:
+  HelloApi:
+    Description: API Gateway endpoint URL
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+  HelloFunction:
+    Description: Lambda function ARN
+    Value: !GetAtt HelloFunction.Arn

@@ -1,0 +1,32 @@
+{
+  "id": "apache-flink",
+  "name": "Apache Flink",
+  "description": "Python-based Apache Flink application for stateful stream processing.",
+  "version": "1.0.0",
+  "category": "big-data",
+  "icon": "🔄",
+  "tech": ["Apache Flink", "PyFlink", "Python"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["flink", "streaming", "stateful", "real-time", "python"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 40,
+  "prerequisites": ["python >= 3.9", "java >= 11"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run bash init.sh", "Run bash run.sh"],
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-flink-app",
+      "required": false,
+      "description": "Name for the Flink job",
+      "validation": "^[a-z][a-z0-9-]*$"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

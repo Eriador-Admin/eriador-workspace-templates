@@ -1,0 +1,16 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port {{DEV_PORT}}",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.80.0"
+  },
+  "devDependencies": {
+    "vite": "^5.3.0"
+  }
+}

@@ -1,0 +1,21 @@
+[project]
+name = "{{CLI_NAME}}"
+version = "1.0.0"
+description = "{{CLI_DESCRIPTION}}"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+"{{CLI_NAME}}" = "{{CLI_NAME}}.main:app"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"

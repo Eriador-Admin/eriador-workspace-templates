@@ -1,0 +1,7 @@
+This is a sample document for the RAG pipeline.
+
+You can replace this file with your own documents. The ingestion pipeline
+supports .txt and .md files placed in this data/ directory.
+
+Add your knowledge base documents here and run the /ingest endpoint
+to vectorize them into ChromaDB.

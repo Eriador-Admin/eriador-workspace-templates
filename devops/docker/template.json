@@ -1,0 +1,28 @@
+{
+  "id": "docker",
+  "name": "Docker Multi-Stage",
+  "description": "Production Docker setup with multi-stage builds, Compose, health checks, and best practices",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "🐳",
+  "tech": ["Docker", "Docker Compose", "Node.js", "TypeScript"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["devops", "cicd"],
+  "tags": ["docker", "container", "compose", "multi-stage", "devops"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 5,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-docker-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

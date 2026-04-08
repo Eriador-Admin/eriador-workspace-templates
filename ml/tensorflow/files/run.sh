@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+source venv/bin/activate 2>/dev/null || true
+echo "Starting training..."
+python train.py

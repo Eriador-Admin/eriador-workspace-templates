@@ -1,0 +1,35 @@
+{
+  "id": "strapi",
+  "name": "Strapi Headless CMS",
+  "description": "Headless CMS with Strapi, REST and GraphQL APIs, and content types",
+  "version": "1.0.0",
+  "category": "cms",
+  "icon": "🚀",
+  "tech": ["JavaScript", "Strapi", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["strapi", "cms", "headless", "api", "content-management"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-cms",
+      "required": true,
+      "description": "Name of the Strapi project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "API Port",
+      "type": "number",
+      "default": 1337,
+      "required": false,
+      "description": "Port for the Strapi server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

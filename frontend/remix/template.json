@@ -1,0 +1,35 @@
+{
+  "id": "remix",
+  "name": "Remix",
+  "description": "Full-stack React framework with file-based routing, loaders, and actions",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "💿",
+  "tech": ["TypeScript", "React", "Remix"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["remix", "react", "fullstack", "ssr", "typescript"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 8,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-remix-app",
+      "required": true,
+      "description": "Name of the Remix project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

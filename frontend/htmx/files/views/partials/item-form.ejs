@@ -1,0 +1,21 @@
+<tr id="item-<%= item.id %>" class="editing">
+  <td colspan="4">
+    <form
+      hx-put="/items/<%= item.id %>"
+      hx-target="#item-<%= item.id %>"
+      hx-swap="outerHTML"
+      class="edit-form"
+    >
+      <input type="text" name="name" value="<%= item.name %>" required>
+      <input type="text" name="description" value="<%= item.description %>">
+      <button type="submit" class="btn-save">Save</button>
+      <button
+        type="button"
+        hx-get="/items"
+        hx-target="#item-list"
+        hx-swap="innerHTML"
+        class="btn-cancel"
+      >Cancel</button>
+    </form>
+  </td>
+</tr>

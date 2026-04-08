@@ -1,0 +1,27 @@
+{
+  "id": "raylib",
+  "name": "Raylib C Game",
+  "description": "C game with raylib featuring 2D rendering, input handling, and a simple game loop",
+  "version": "1.0.0",
+  "category": "game",
+  "icon": "⚡",
+  "tech": ["C", "raylib", "CMake"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["game", "raylib", "c", "2d", "3d", "wasm", "low-level"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 7,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-raylib-game",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

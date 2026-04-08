@@ -1,0 +1,18 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "node serve.js",
+    "lint": "npx @redocly/cli lint spec/openapi.yaml",
+    "bundle": "npx @redocly/cli bundle spec/openapi.yaml -o dist/openapi.yaml"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "swagger-ui-express": "^5.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@redocly/cli": "^1.16.0"
+  }
+}

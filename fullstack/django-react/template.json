@@ -1,0 +1,35 @@
+{
+  "id": "django-react",
+  "name": "Django + React",
+  "description": "Django REST backend with React Vite frontend in a monorepo structure",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "icon": "🐍",
+  "tech": ["Python", "Django", "React", "TypeScript", "Vite"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["django", "react", "fullstack", "python", "drf"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 4,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-django-react-app",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Backend Port",
+      "type": "number",
+      "default": 8000,
+      "required": false,
+      "description": "Port for the Django dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

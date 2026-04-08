@@ -1,0 +1,40 @@
+{
+  "id": "hadoop-mapreduce",
+  "name": "Hadoop MapReduce",
+  "description": "Java-based Hadoop MapReduce job with HDFS integration and local runner.",
+  "version": "1.0.0",
+  "category": "big-data",
+  "icon": "🐘",
+  "tech": ["Hadoop", "MapReduce", "Java", "Maven"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["hadoop", "mapreduce", "hdfs", "batch", "java"],
+  "access": "free",
+  "featured": false,
+  "sort_order": 20,
+  "prerequisites": ["java >= 11", "maven >= 3.8"],
+  "deprecated": false,
+  "deprecated_message": null,
+  "post_scaffold": ["Open README.md", "Run bash init.sh", "Run bash run.sh"],
+  "variables": [
+    {
+      "name": "GROUP_ID",
+      "label": "Maven Group ID",
+      "type": "string",
+      "default": "com.example",
+      "required": false,
+      "description": "Maven group ID for the project"
+    },
+    {
+      "name": "ARTIFACT_ID",
+      "label": "Maven Artifact ID",
+      "type": "string",
+      "default": "wordcount",
+      "required": false,
+      "description": "Maven artifact ID",
+      "validation": "^[a-z][a-z0-9-]*$"
+    }
+  ],
+  "created_at": "2026-04-07",
+  "updated_at": "2026-04-07"
+}

@@ -1,0 +1,49 @@
+{
+	# Global options
+	admin :2019
+	# For local dev, use internal CA (no real ACME)
+	local_certs
+	auto_https disable_redirects
+}
+
+:80 {
+	# API reverse proxy — load balanced
+	handle /api/* {
+		uri strip_prefix /api
+		reverse_proxy api:3000 {
+			lb_policy round_robin
+			health_uri /health
+			health_interval 10s
+
+			header_up X-Real-IP {remote_host}
+			header_up X-Forwarded-For {remote_host}
+			header_up X-Forwarded-Proto {scheme}
+		}
+	}
+
+	# Static file server
+	handle {
+		root * /srv/static
+		file_server
+	}
+
+	# Security headers
+	header {
+		X-Frame-Options "SAMEORIGIN"
+		X-Content-Type-Options "nosniff"
+		X-XSS-Protection "1; mode=block"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# Request logging
+	log {
+		output stdout
+		format console
+	}
+
+	# Rate limiting (requires caddy-ratelimit plugin or use handle approach)
+	# For built-in, Caddy uses order-based matching
+
+	encode gzip zstd
+}

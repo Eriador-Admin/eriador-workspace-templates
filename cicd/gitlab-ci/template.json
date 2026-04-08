@@ -1,0 +1,27 @@
+{
+  "id": "gitlab-ci",
+  "name": "GitLab CI/CD",
+  "description": "GitLab CI/CD pipeline with build, test, lint, Docker, and multi-environment deploy stages",
+  "version": "1.0.0",
+  "category": "cicd",
+  "icon": "🦊",
+  "tech": ["GitLab CI", "Docker", "YAML"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["gitlab", "ci", "cd", "pipeline", "devops", "deployment"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-gitlab-project",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

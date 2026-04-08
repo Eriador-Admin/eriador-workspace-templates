@@ -1,0 +1,102 @@
+pipeline {
+    agent none
+
+    parameters {
+        string(name: 'BRANCH', defaultValue: 'main', description: 'Branch to build')
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'staging', 'production'], description: 'Target environment')
+        booleanParam(name: 'SKIP_TESTS', defaultValue: false, description: 'Skip test stage')
+    }
+
+    environment {
+        APP_NAME = '{{PROJECT_NAME}}'
+        BUILD_VERSION = "${env.BUILD_NUMBER}-${env.GIT_COMMIT?.take(7) ?: 'local'}"
+    }
+
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    stages {
+        stage('Checkout') {
+            agent any
+            steps {
+                checkout scm
+                echo "Building ${APP_NAME} version ${BUILD_VERSION}"
+            }
+        }
+
+        stage('Build') {
+            agent {
+                docker { image 'node:20-alpine' }
+            }
+            steps {
+                sh './scripts/build.sh'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                }
+            }
+        }
+
+        stage('Test') {
+            when {
+                expression { return !params.SKIP_TESTS }
+            }
+            parallel {
+                stage('Unit Tests') {
+                    agent {
+                        docker { image 'node:20-alpine' }
+                    }
+                    steps {
+                        sh './scripts/test.sh unit'
+                    }
+                    post {
+                        always {
+                            junit allowEmptyResults: true, testResults: 'reports/unit/*.xml'
+                        }
+                    }
+                }
+                stage('Integration Tests') {
+                    agent {
+                        docker { image 'node:20-alpine' }
+                    }
+                    steps {
+                        sh './scripts/test.sh integration'
+                    }
+                    post {
+                        always {
+                            junit allowEmptyResults: true, testResults: 'reports/integration/*.xml'
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                branch 'main'
+                expression { return params.ENVIRONMENT != 'production' || currentBuild.resultIsBetterOrEqualTo('SUCCESS') }
+            }
+            agent any
+            steps {
+                echo "Deploying to ${params.ENVIRONMENT}"
+                sh "./scripts/deploy.sh ${params.ENVIRONMENT}"
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline finished: ${currentBuild.currentResult}"
+        }
+        failure {
+            echo "Build failed! Check logs for details."
+        }
+        success {
+            echo "Build succeeded for ${APP_NAME} ${BUILD_VERSION}"
+        }
+    }
+}

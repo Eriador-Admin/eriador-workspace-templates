@@ -1,0 +1,27 @@
+{
+  "id": "libgdx",
+  "name": "libGDX Java Game",
+  "description": "Cross-platform Java game with libGDX framework, Gradle build, and desktop launcher",
+  "version": "1.0.0",
+  "category": "game",
+  "icon": "☕",
+  "tech": ["Java", "libGDX", "Gradle"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["game", "libgdx", "java", "cross-platform", "android", "desktop"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 8,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-libgdx-game",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

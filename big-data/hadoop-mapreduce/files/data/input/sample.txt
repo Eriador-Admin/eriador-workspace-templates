@@ -1,0 +1,4 @@
+The quick brown fox jumps over the lazy dog.
+The dog barked at the fox.
+Hadoop processes large datasets across distributed clusters.
+MapReduce splits work into map and reduce phases.

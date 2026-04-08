@@ -1,0 +1,34 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:{{DEV_PORT}}",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "{{APP_NAME}}",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false
+    },
+    "bundle": {
+      "active": true,
+      "identifier": "com.belfalas.{{APP_NAME}}",
+      "targets": "all"
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "{{WINDOW_TITLE}}",
+        "width": 900,
+        "height": 670,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  }
+}

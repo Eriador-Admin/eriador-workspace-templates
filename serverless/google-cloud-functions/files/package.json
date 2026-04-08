@@ -1,0 +1,13 @@
+{
+  "name": "{{FUNCTION_NAME}}",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @google-cloud/functions-framework --target=helloWorld --port={{DEV_PORT}}",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0"
+  }
+}

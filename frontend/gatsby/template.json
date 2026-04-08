@@ -1,0 +1,27 @@
+{
+  "id": "gatsby",
+  "name": "Gatsby Static Site",
+  "description": "Gatsby static site generator with TypeScript, MDX blog posts, and image optimization",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "💜",
+  "tech": ["TypeScript", "Gatsby", "React", "GraphQL", "MDX"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["gatsby", "ssg", "react", "mdx", "static-site"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 10,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-gatsby-site",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

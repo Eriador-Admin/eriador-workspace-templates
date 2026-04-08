@@ -1,0 +1,27 @@
+{
+  "id": "godot",
+  "name": "Godot Game Project",
+  "description": "2D game project template for Godot Engine with GDScript and a starter scene",
+  "version": "1.0.0",
+  "category": "game",
+  "icon": "🕹️",
+  "tech": ["GDScript", "Godot"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["game", "godot", "gdscript", "2d", "game-engine"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Game Name",
+      "type": "string",
+      "default": "my-godot-game",
+      "required": true,
+      "description": "Name of the Godot project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

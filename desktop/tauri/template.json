@@ -1,0 +1,42 @@
+{
+  "id": "tauri",
+  "name": "Tauri Desktop App",
+  "description": "Lightweight desktop application with Tauri, Rust backend, and React frontend",
+  "version": "1.0.0",
+  "category": "desktop",
+  "icon": "🦀",
+  "tech": ["Tauri", "Rust", "React", "TypeScript"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["tauri", "desktop", "rust", "react", "cross-platform"],
+  "access": "public",
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-tauri-app",
+      "required": true,
+      "description": "Name of the desktop application"
+    },
+    {
+      "name": "WINDOW_TITLE",
+      "label": "Window Title",
+      "type": "string",
+      "default": "My Tauri App",
+      "required": false,
+      "description": "Title displayed in the window title bar"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 1420,
+      "required": false,
+      "description": "Port for the Vite dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

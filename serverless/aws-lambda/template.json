@@ -1,0 +1,44 @@
+{
+  "id": "aws-lambda",
+  "name": "AWS Lambda (Node.js)",
+  "description": "Serverless function with AWS Lambda, API Gateway, and SAM for local development",
+  "version": "1.0.0",
+  "category": "serverless",
+  "icon": "⚡",
+  "tech": ["Node.js", "AWS Lambda", "SAM"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["aws", "lambda", "serverless", "api-gateway", "sam"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "FUNCTION_NAME",
+      "label": "Function Name",
+      "type": "string",
+      "default": "my-lambda",
+      "required": true,
+      "description": "Name of the Lambda function"
+    },
+    {
+      "name": "RUNTIME",
+      "label": "Node.js Runtime",
+      "type": "choice",
+      "default": "nodejs20.x",
+      "required": true,
+      "options": ["nodejs18.x", "nodejs20.x"],
+      "description": "Node.js runtime version"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Local API Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for SAM local API"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

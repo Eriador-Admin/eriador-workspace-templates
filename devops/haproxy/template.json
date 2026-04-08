@@ -1,0 +1,27 @@
+{
+  "id": "haproxy",
+  "name": "HAProxy Load Balancer",
+  "description": "High-performance HAProxy TCP/HTTP load balancer with health checks, stats dashboard, and sticky sessions",
+  "version": "1.0.0",
+  "category": "devops",
+  "icon": "⚖️",
+  "tech": ["HAProxy", "Docker", "Docker Compose"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["haproxy", "load-balancer", "tcp", "http", "high-availability"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 9,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-haproxy-stack",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

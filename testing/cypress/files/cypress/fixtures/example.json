@@ -1,0 +1,8 @@
+{
+  "name": "Example User",
+  "email": "user@example.com",
+  "items": [
+    { "id": 1, "name": "Item One" },
+    { "id": 2, "name": "Item Two" }
+  ]
+}

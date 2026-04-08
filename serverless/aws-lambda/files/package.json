@@ -1,0 +1,14 @@
+{
+  "name": "{{FUNCTION_NAME}}",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/**/*.test.mjs",
+    "invoke": "sam local invoke HelloFunction --event events/event.json",
+    "start": "sam local start-api --port {{DEV_PORT}}"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131"
+  }
+}

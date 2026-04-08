@@ -1,0 +1,35 @@
+{
+  "id": "expo",
+  "name": "Expo (React Native)",
+  "description": "Cross-platform mobile app with Expo, React Native, TypeScript, and Expo Router",
+  "version": "1.0.0",
+  "category": "mobile",
+  "icon": "📱",
+  "tech": ["React Native", "Expo", "TypeScript"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["expo", "react-native", "cross-platform", "mobile", "typescript"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 5,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-expo-app",
+      "required": true,
+      "description": "Name of the Expo application"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 8081,
+      "required": false,
+      "description": "Port for the Expo dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

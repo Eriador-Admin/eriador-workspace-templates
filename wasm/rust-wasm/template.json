@@ -1,0 +1,35 @@
+{
+  "id": "rust-wasm",
+  "name": "Rust WebAssembly",
+  "description": "Rust compiled to WebAssembly with wasm-pack, wasm-bindgen, and a web demo",
+  "version": "1.0.0",
+  "category": "wasm",
+  "icon": "🦀",
+  "tech": ["Rust", "WebAssembly", "JavaScript"],
+  "difficulty": "advanced",
+  "author": "Belfalas",
+  "tags": ["wasm", "rust", "webassembly", "wasm-pack", "wasm-bindgen"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-wasm-lib",
+      "required": true,
+      "description": "Name of the Rust WASM library"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Demo Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for the demo web server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

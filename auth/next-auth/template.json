@@ -1,0 +1,35 @@
+{
+  "id": "next-auth",
+  "name": "NextAuth.js",
+  "description": "Next.js app with Auth.js authentication, OAuth providers, and session management",
+  "version": "1.0.0",
+  "category": "auth",
+  "icon": "🔐",
+  "tech": ["TypeScript", "Next.js", "Auth.js", "React"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["auth", "nextauth", "oauth", "session", "nextjs"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-auth-app",
+      "required": true,
+      "description": "Name of the project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

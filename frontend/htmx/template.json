@@ -1,0 +1,28 @@
+{
+  "id": "htmx",
+  "name": "HTMX App",
+  "description": "Hypermedia-driven web app with HTMX, Express, and server-rendered HTML templates",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "⚡",
+  "tech": ["HTMX", "JavaScript", "Express", "EJS"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["frontend", "htmx", "hypermedia", "server-rendered", "ejs", "no-build"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 10,
+  "prerequisites": ["Node.js 18+"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-htmx-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

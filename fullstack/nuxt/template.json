@@ -1,0 +1,35 @@
+{
+  "id": "nuxt",
+  "name": "Nuxt",
+  "description": "Nuxt 3 full-stack Vue framework with file-based routing and server API",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "icon": "💚",
+  "tech": ["TypeScript", "Vue", "Nuxt", "Nitro"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["nuxt", "vue", "fullstack", "ssr", "typescript"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-nuxt-app",
+      "required": true,
+      "description": "Name of the Nuxt project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

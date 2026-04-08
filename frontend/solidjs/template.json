@@ -1,0 +1,28 @@
+{
+  "id": "solidjs",
+  "name": "SolidJS App",
+  "description": "SolidJS single-page application with Vite, reactive primitives, routing, and component patterns",
+  "version": "1.0.0",
+  "category": "frontend",
+  "icon": "💎",
+  "tech": ["TypeScript", "SolidJS", "Vite"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["frontend", "solidjs", "spa", "reactive", "vite"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 11,
+  "prerequisites": ["Node.js 18+"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-solidjs-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

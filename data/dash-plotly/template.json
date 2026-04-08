@@ -1,0 +1,29 @@
+{
+  "id": "dash-plotly",
+  "name": "Dash Plotly Dashboard",
+  "description": "Python interactive dashboard with Dash and Plotly featuring callbacks, graphs, and data tables",
+  "version": "1.0.0",
+  "category": "data",
+  "icon": "📊",
+  "tech": ["Python", "Dash", "Plotly", "Pandas"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["data", "frontend"],
+  "tags": ["data", "dashboard", "plotly", "dash", "visualization", "python", "analytics"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "prerequisites": ["Python 3.10+"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-dash-dashboard",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

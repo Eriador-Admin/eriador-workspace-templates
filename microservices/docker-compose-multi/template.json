@@ -1,0 +1,35 @@
+{
+  "id": "docker-compose-multi",
+  "name": "Multi-Service Docker Compose",
+  "description": "Multi-service architecture with Docker Compose, API gateway, and service discovery",
+  "version": "1.0.0",
+  "category": "microservices",
+  "icon": "🐳",
+  "tech": ["Docker", "Node.js", "Nginx"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["docker", "microservices", "docker-compose", "nginx", "gateway"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-microservices",
+      "required": true,
+      "description": "Name of the microservices project"
+    },
+    {
+      "name": "GATEWAY_PORT",
+      "label": "Gateway Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for the API gateway"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

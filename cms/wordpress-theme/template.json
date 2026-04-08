@@ -1,0 +1,35 @@
+{
+  "id": "wordpress-theme",
+  "name": "WordPress Theme",
+  "description": "Custom WordPress theme development with PHP, a starter theme, and Docker setup",
+  "version": "1.0.0",
+  "category": "cms",
+  "icon": "📝",
+  "tech": ["PHP", "WordPress", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["wordpress", "php", "theme", "cms"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Theme Name",
+      "type": "string",
+      "default": "my-theme",
+      "required": true,
+      "description": "Name of the WordPress theme"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "WordPress Port",
+      "type": "number",
+      "default": 8080,
+      "required": false,
+      "description": "Port for the WordPress site"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

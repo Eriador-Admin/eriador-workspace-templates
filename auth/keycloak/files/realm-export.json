@@ -1,0 +1,32 @@
+{
+  "realm": "myapp",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "myapp-client",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "change-me-secret",
+      "redirectUris": ["http://localhost:3000/*"],
+      "webOrigins": ["http://localhost:3000"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "testuser",
+      "enabled": true,
+      "email": "test@example.com",
+      "firstName": "Test",
+      "lastName": "User",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "mern",
+  "name": "MERN Stack",
+  "description": "Full-stack app with MongoDB, Express, React, and Node.js with JWT authentication",
+  "version": "1.0.0",
+  "category": "fullstack",
+  "icon": "🍃",
+  "tech": ["TypeScript", "MongoDB", "Express", "React", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "composes": ["express-api", "react-vite", "mongodb"],
+  "tags": ["mern", "mongodb", "express", "react", "fullstack", "jwt"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 5,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-mern-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

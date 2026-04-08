@@ -1,0 +1,35 @@
+{
+  "id": "docusaurus",
+  "name": "Docusaurus Documentation Site",
+  "description": "React-powered documentation site with Docusaurus, MDX support, and versioning",
+  "version": "1.0.0",
+  "category": "docs",
+  "icon": "🦖",
+  "tech": ["JavaScript", "React", "Docusaurus", "MDX"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["docs", "documentation", "docusaurus", "react", "mdx", "static-site"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-docs",
+      "required": true,
+      "description": "Name of the documentation site"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Port",
+      "type": "number",
+      "default": 3000,
+      "required": false,
+      "description": "Port for the dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

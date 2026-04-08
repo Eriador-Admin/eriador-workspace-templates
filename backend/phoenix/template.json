@@ -1,0 +1,28 @@
+{
+  "id": "phoenix",
+  "name": "Phoenix API",
+  "description": "Elixir REST API with Phoenix Framework featuring LiveView, Ecto, and PostgreSQL",
+  "version": "1.0.0",
+  "category": "backend",
+  "icon": "🔥",
+  "tech": ["Elixir", "Phoenix", "Ecto", "PostgreSQL"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["backend", "elixir", "phoenix", "api", "liveview", "ecto", "functional"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 14,
+  "prerequisites": ["Elixir 1.15+", "Erlang/OTP 26+", "PostgreSQL"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-phoenix-api",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

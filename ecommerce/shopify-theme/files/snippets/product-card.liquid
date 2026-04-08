@@ -1,0 +1,15 @@
+<div class="product-card">
+  <a href="{{ product.url }}">
+    {% if product.featured_image %}
+      <img
+        src="{{ product.featured_image | image_url: width: 400 }}"
+        alt="{{ product.featured_image.alt | escape }}"
+        loading="lazy"
+        width="400"
+        height="400"
+      />
+    {% endif %}
+    <h3>{{ product.title }}</h3>
+    <p class="price">{{ product.price | money }}</p>
+  </a>
+</div>

@@ -1,0 +1,35 @@
+{
+  "id": "phaser-js",
+  "name": "Phaser.js Web Game",
+  "description": "HTML5 game with Phaser 3, Vite bundler, and a starter scene",
+  "version": "1.0.0",
+  "category": "game",
+  "icon": "🎮",
+  "tech": ["JavaScript", "Phaser", "Vite"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["game", "phaser", "html5", "canvas", "webgl"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Game Name",
+      "type": "string",
+      "default": "my-game",
+      "required": true,
+      "description": "Name of the game project"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Port for the Vite dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

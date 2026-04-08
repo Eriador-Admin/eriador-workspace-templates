@@ -1,0 +1,29 @@
+{
+  "id": "elasticsearch",
+  "name": "Elasticsearch Service",
+  "description": "Node.js search service with Elasticsearch featuring full-text search, indexing, and aggregations",
+  "version": "1.0.0",
+  "category": "search",
+  "icon": "🔎",
+  "tech": ["TypeScript", "Elasticsearch", "Express", "Docker", "Node.js"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["search", "observability", "big-data"],
+  "tags": ["search", "elasticsearch", "full-text", "indexing", "aggregation"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "prerequisites": ["Node.js 18+", "Docker (for Elasticsearch)"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-elasticsearch-service",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,109 @@
+openapi: "3.1.0"
+info:
+  title: {{PROJECT_NAME}}
+  description: API specification for {{PROJECT_NAME}}
+  version: "1.0.0"
+  contact:
+    name: {{AUTHOR}}
+
+servers:
+  - url: http://localhost:{{DEV_PORT}}
+    description: Local development
+
+paths:
+  /items:
+    get:
+      summary: List all items
+      operationId: listItems
+      tags:
+        - Items
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+      responses:
+        "200":
+          description: A list of items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Item"
+
+    post:
+      summary: Create an item
+      operationId: createItem
+      tags:
+        - Items
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateItem"
+      responses:
+        "201":
+          description: Item created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Item"
+
+  /items/{id}:
+    get:
+      summary: Get an item by ID
+      operationId: getItem
+      tags:
+        - Items
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: The item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Item"
+        "404":
+          description: Item not found
+
+components:
+  schemas:
+    Item:
+      type: object
+      required:
+        - id
+        - name
+        - created_at
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          maxLength: 200
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+
+    CreateItem:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        description:
+          type: string

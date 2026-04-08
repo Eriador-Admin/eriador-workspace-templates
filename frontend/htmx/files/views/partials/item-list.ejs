@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (items.length === 0) { %>
+      <tr><td colspan="4" class="empty">No items yet. Add one above!</td></tr>
+    <% } else { %>
+      <% items.forEach(item => { %>
+        <%- include('item-row', { item }) %>
+      <% }) %>
+    <% } %>
+  </tbody>
+</table>

@@ -1,0 +1,92 @@
+:root {
+  --color-primary: {{ settings.color_primary }};
+  --color-text: {{ settings.color_text }};
+  --color-bg: {{ settings.color_background }};
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main-nav a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-banner {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #f8fafc;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.featured-collection {
+  padding: 2rem 1rem;
+}
+
+.featured-collection h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #e2e8f0;
+}

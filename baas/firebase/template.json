@@ -1,0 +1,28 @@
+{
+  "id": "firebase",
+  "name": "Firebase Starter",
+  "description": "Firebase project with Firestore, Authentication, Cloud Functions, and Storage",
+  "version": "1.0.0",
+  "category": "baas",
+  "icon": "🔥",
+  "tech": ["TypeScript", "Firebase", "Express", "Node.js"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "categories": ["baas", "auth", "serverless"],
+  "tags": ["firebase", "firestore", "auth", "cloud-functions", "storage", "baas"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 2,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-firebase-app",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

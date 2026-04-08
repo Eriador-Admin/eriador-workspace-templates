@@ -1,0 +1,27 @@
+{
+  "id": "dapp-wagmi",
+  "name": "React dApp with Wagmi",
+  "description": "React dApp with wagmi, viem, and RainbowKit for wallet connection and smart contract interaction",
+  "version": "1.0.0",
+  "category": "web3",
+  "icon": "🦊",
+  "tech": ["TypeScript", "React", "Vite", "wagmi", "viem", "RainbowKit"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["dapp", "wagmi", "viem", "rainbowkit", "ethereum", "wallet"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-dapp",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

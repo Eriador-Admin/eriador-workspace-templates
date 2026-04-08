@@ -1,0 +1,43 @@
+{
+  "id": "kotlin-android",
+  "name": "Kotlin Android App",
+  "description": "Native Android application with Jetpack Compose, MVVM architecture, and Gradle build system",
+  "version": "1.0.0",
+  "category": "mobile",
+  "icon": "🤖",
+  "tech": ["Kotlin", "Jetpack Compose", "Android"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["android", "kotlin", "compose", "mobile", "native", "jetpack"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 35,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "MyApp",
+      "required": true,
+      "description": "Name of the Android application"
+    },
+    {
+      "name": "PACKAGE_NAME",
+      "label": "Package Name",
+      "type": "string",
+      "default": "com.example.myapp",
+      "required": true,
+      "description": "Java/Kotlin package name"
+    },
+    {
+      "name": "MIN_SDK",
+      "label": "Minimum SDK Version",
+      "type": "number",
+      "default": 26,
+      "required": false,
+      "description": "Minimum Android SDK version (API level)"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

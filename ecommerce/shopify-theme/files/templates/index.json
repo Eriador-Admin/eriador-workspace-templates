@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "heading": "Welcome to our store",
+        "subheading": "Discover our latest collection"
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Products"
+      }
+    }
+  },
+  "order": ["hero", "featured"]
+}

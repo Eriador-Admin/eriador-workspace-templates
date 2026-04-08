@@ -1,0 +1,35 @@
+{
+  "id": "electron",
+  "name": "Electron Desktop App",
+  "description": "Cross-platform desktop application with Electron, React, and TypeScript",
+  "version": "1.0.0",
+  "category": "desktop",
+  "icon": "🖥️",
+  "tech": ["Electron", "React", "TypeScript"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["electron", "desktop", "cross-platform", "react", "typescript"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "APP_NAME",
+      "label": "Application Name",
+      "type": "string",
+      "default": "my-electron-app",
+      "required": true,
+      "description": "Name of the desktop application"
+    },
+    {
+      "name": "DEV_PORT",
+      "label": "Dev Server Port",
+      "type": "number",
+      "default": 5173,
+      "required": false,
+      "description": "Port for the Vite dev server"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+echo "Starting {{PROJECT_NAME}} on port ${PORT:-3000}..."
+npm run dev

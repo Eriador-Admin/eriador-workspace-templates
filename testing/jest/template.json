@@ -1,0 +1,27 @@
+{
+  "id": "jest",
+  "name": "Jest Testing",
+  "description": "Unit and integration testing setup with Jest, TypeScript, and coverage reporting",
+  "version": "1.0.0",
+  "category": "testing",
+  "icon": "🃏",
+  "tech": ["TypeScript", "Jest"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["jest", "testing", "unit-test", "coverage", "tdd"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 3,
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-tests",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

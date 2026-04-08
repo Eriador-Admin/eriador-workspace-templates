@@ -1,0 +1,28 @@
+{
+  "id": "jenkins",
+  "name": "Jenkins Pipeline",
+  "description": "Jenkins CI/CD pipeline with declarative Jenkinsfile, Docker agents, and multi-stage builds",
+  "version": "1.0.0",
+  "category": "cicd",
+  "icon": "🔧",
+  "tech": ["Jenkins", "Groovy", "Docker", "Pipeline"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "tags": ["ci", "cd", "jenkins", "pipeline", "automation", "groovy"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 2,
+  "prerequisites": ["Jenkins 2.x (or Docker)", "Docker"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-jenkins-pipeline",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

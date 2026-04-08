@@ -1,0 +1,9 @@
+/.bundle
+/log/*
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-*
+/storage
+.env
+.DS_Store
+/vendor/bundle

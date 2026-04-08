@@ -1,0 +1,35 @@
+# Production Caddyfile — replace example.com with your domain
+# Caddy will automatically obtain and renew Let's Encrypt certs
+
+example.com {
+	# API reverse proxy
+	handle /api/* {
+		uri strip_prefix /api
+		reverse_proxy api:3000 {
+			lb_policy round_robin
+			health_uri /health
+			health_interval 10s
+		}
+	}
+
+	# Static files
+	handle {
+		root * /srv/static
+		file_server
+	}
+
+	header {
+		X-Frame-Options "SAMEORIGIN"
+		X-Content-Type-Options "nosniff"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	encode gzip zstd
+
+	log {
+		output file /var/log/caddy/access.log
+		format json
+	}
+}

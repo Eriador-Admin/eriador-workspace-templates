@@ -1,0 +1,29 @@
+{
+  "id": "logstash",
+  "name": "Logstash Pipeline",
+  "description": "Logstash data processing pipeline for ingesting, transforming, and routing logs and events",
+  "version": "1.0.0",
+  "category": "observability",
+  "icon": "🔀",
+  "tech": ["Logstash", "Docker"],
+  "difficulty": "intermediate",
+  "author": "Belfalas",
+  "categories": ["observability", "data"],
+  "tags": ["logstash", "etl", "pipeline", "log-processing", "data-ingestion"],
+  "access": "public",
+  "featured": false,
+  "sort_order": 5,
+  "prerequisites": ["Docker & Docker Compose"],
+  "variables": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "string",
+      "default": "my-logstash",
+      "required": true,
+      "description": "Name of the project"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}

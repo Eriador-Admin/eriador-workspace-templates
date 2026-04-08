@@ -1,0 +1,35 @@
+{
+  "id": "node-cli",
+  "name": "Node.js CLI (Commander)",
+  "description": "Command-line tool built with Node.js, Commander.js, and chalk for styled output",
+  "version": "1.0.0",
+  "category": "cli",
+  "icon": "🖥️",
+  "tech": ["Node.js", "Commander.js", "TypeScript"],
+  "difficulty": "beginner",
+  "author": "Belfalas",
+  "tags": ["cli", "node", "commander", "terminal", "typescript"],
+  "access": "public",
+  "featured": true,
+  "sort_order": 1,
+  "variables": [
+    {
+      "name": "CLI_NAME",
+      "label": "CLI Name",
+      "type": "string",
+      "default": "mycli",
+      "required": true,
+      "description": "Name of the CLI command"
+    },
+    {
+      "name": "CLI_DESCRIPTION",
+      "label": "Description",
+      "type": "string",
+      "default": "A custom CLI tool",
+      "required": false,
+      "description": "Description shown in help text"
+    }
+  ],
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z"
+}
