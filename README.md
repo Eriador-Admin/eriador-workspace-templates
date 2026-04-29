@@ -78,7 +78,7 @@ Each template must have:
 
 `difficulty`, `author`, `tags`, `subcategory`, `access`, `featured`, `sort_order`, `prerequisites`, `deprecated`, `deprecated_message`, `post_scaffold`, `variables`, `created_at`, `updated_at`
 
-See the design document (in the parent monorepo at `documentation/WORKSPACE_TEMPLATES_DESIGN.md`) for full field specifications.
+See the design document (in the parent monorepo at `documentation/workspace/WORKSPACE_TEMPLATES_DESIGN.md`) for full field specifications.
 
 ## Adding a New Category
 
@@ -116,5 +116,5 @@ The deployment sidecar uses `TEMPLATES_BRANCH` env var to select the branch.
 
 ## Related Documentation
 
-- Workspace Templates Design Document (in parent monorepo at `documentation/WORKSPACE_TEMPLATES_DESIGN.md`)
+- Workspace Templates Design Document (in parent monorepo at `documentation/workspace/WORKSPACE_TEMPLATES_DESIGN.md`)
 - Implementation Plan (in parent monorepo at `documentation/IMPLEMENTATION_PLAN.md`)

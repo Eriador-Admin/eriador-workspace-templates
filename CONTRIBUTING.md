@@ -153,7 +153,7 @@ node -e "
 4. After review and merge, changes are available in staging
 5. Promote to `main` via a separate PR for production release
 
-See the design document (in the parent monorepo at `documentation/WORKSPACE_TEMPLATES_DESIGN.md`) Section 12 for full branching details.
+See the design document (in the parent monorepo at `documentation/workspace/WORKSPACE_TEMPLATES_DESIGN.md`) Section 12 for full branching details.
 
 ## Updating an Existing Template
 
