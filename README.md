@@ -1,6 +1,14 @@
-# belfalas-workspace-templates
+# eriador-workspace-templates
 
-Template repository for the Belfalas IDE "New from Template" feature. Contains real, runnable project scaffolds organized by category.
+Public read-only template registry for the Belfalas IDE "New from Template" feature. Contains 150+ real, runnable project scaffolds organized by category.
+
+> **Repo home:** [`Eriador-Admin/eriador-workspace-templates`](https://github.com/Eriador-Admin/eriador-workspace-templates) — public. Anyone can clone / fetch without credentials:
+>
+> ```bash
+> git clone https://github.com/Eriador-Admin/eriador-workspace-templates.git
+> ```
+>
+> Migrated from private `Belfalas-Admin/belfalas-workspace-templates` on 2026-07-09.
 
 ## How It Works
 
@@ -27,10 +35,10 @@ Template repository for the Belfalas IDE "New from Template" feature. Contains r
 ## Directory Structure
 
 ```
-belfalas-workspace-templates/
+eriador-workspace-templates/
 ├── .github/workflows/validate-templates.yml   ← CI validation
 ├── frontend/
-│   ├── category.json                          ← Category metadata
+│   ├── category.json                          ← Category metadata (optional; auto-discovered)
 │   ├── react-vite/
 │   │   ├── template.json                      ← Template metadata
 │   │   └── files/                             ← Real project files
