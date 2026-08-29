@@ -1,11 +1,11 @@
 # Agent Instructions — {{PROJECT_NAME}}
 
-This is a 2D game built with SFML in C++17.
+This is a 2D game built with SFML in C++26.
 
 ## Tech Stack
-- **Language**: C++17
+- **Language**: C++26
 - **Library**: SFML 2.6+
-- **Build**: CMake 3.16+
+- **Build**: CMake 3.28+
 
 ## Key Conventions
 - Game loop: `while (window.isOpen()) { processEvents(); update(dt); render(); }`
