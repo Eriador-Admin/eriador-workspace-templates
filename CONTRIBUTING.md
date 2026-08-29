@@ -1,4 +1,4 @@
-# Contributing to belfalas-workspace-templates
+# Contributing to eriador-workspace-templates
 
 Thank you for contributing templates to the Belfalas IDE! This guide covers how to add, update, and test templates.
 

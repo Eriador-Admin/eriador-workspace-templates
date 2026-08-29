@@ -7,8 +7,6 @@ Public read-only template registry for the Belfalas IDE "New from Template" feat
 > ```bash
 > git clone https://github.com/Eriador-Admin/eriador-workspace-templates.git
 > ```
->
-> Migrated from private `Belfalas-Admin/belfalas-workspace-templates` on 2026-07-09.
 
 ## How It Works
 
