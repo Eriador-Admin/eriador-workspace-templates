@@ -12,8 +12,8 @@ bash stop.sh     # stop
 
 ## Prerequisites
 
-- CMake 3.16+
-- C++17 compiler (GCC 9+, Clang 10+, MSVC 2019+)
+- CMake 3.28+
+- C++26 compiler (GCC 16+)
 - SFML 2.6+ (installed via system package manager or auto-fetched by CMake)
 
 ### Install SFML
