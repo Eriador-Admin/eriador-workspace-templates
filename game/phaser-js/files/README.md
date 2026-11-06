@@ -25,4 +25,4 @@ index.html        # HTML entry point
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20.19+

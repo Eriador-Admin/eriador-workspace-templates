@@ -5,7 +5,7 @@ This is a Hono web API project.
 ## Tech Stack
 - **Framework**: Hono 4.x
 - **Language**: TypeScript
-- **Validation**: Zod
+- **Validation**: Zod 4
 - **Runtime**: Node.js (also works on Bun, Deno, CF Workers)
 
 ## Key Conventions

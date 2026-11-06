@@ -40,4 +40,4 @@ query {
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20+

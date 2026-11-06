@@ -11,6 +11,7 @@
   "tags": ["nestjs", "microservices", "typescript", "tcp", "node"],
   "access": "public",
   "sort_order": 2,
+  "prerequisites": ["Node.js 20.19+"],
   "variables": [
     {
       "name": "SERVICE_NAME",
@@ -38,5 +39,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

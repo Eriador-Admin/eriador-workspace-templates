@@ -28,6 +28,10 @@ public/          # Static assets served as-is
 | `npm run build` | Build production site to `./dist` |
 | `npm run preview` | Preview production build locally |
 
+## Requirements
+
+- Node.js 22.23+
+
 ## Learn More
 
 - [Astro Documentation](https://docs.astro.build)

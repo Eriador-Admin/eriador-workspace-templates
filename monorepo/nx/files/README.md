@@ -31,4 +31,4 @@ npx nx affected -t build     # Build only affected projects
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20 or 22+

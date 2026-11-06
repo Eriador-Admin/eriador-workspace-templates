@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { ItemsService, Item } from './items.service';
+import { ItemsService, type Item } from './items.service';
 import { CreateItemDto } from './dto/create-item.dto';
 
 @Controller('items')

@@ -12,7 +12,7 @@ bash stop.sh    # stop dev server
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js 20.9+
 - Vercel account (for deployment)
 
 ## Project Structure

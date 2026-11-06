@@ -1,4 +1,12 @@
-from pyflink.table import EnvironmentSettings, TableEnvironment
+from pyflink.table import DataTypes, EnvironmentSettings, TableEnvironment
+from pyflink.table.udf import udtf
+
+
+@udtf(result_types=[DataTypes.STRING()])
+def split_words(line: str):
+    """Python table function: emit one row per whitespace-separated word."""
+    for word in line.split():
+        yield word
 
 
 def run(input_path: str, output_path: str, parallelism: int = 1) -> None:
@@ -6,6 +14,7 @@ def run(input_path: str, output_path: str, parallelism: int = 1) -> None:
     settings = EnvironmentSettings.in_batch_mode()
     t_env = TableEnvironment.create(settings)
     t_env.get_config().set("parallelism.default", str(parallelism))
+    t_env.create_temporary_system_function("split_words", split_words)
 
     # Define source
     t_env.execute_sql(f"""
@@ -35,8 +44,7 @@ def run(input_path: str, output_path: str, parallelism: int = 1) -> None:
         INSERT INTO sink_table
         SELECT word, COUNT(*) AS cnt
         FROM source_table,
-        LATERAL TABLE(string_split(line, ' ')) AS T(word)
-        WHERE word <> ''
+        LATERAL TABLE(split_words(line)) AS T(word)
         GROUP BY word
     """).wait()
 

@@ -26,7 +26,9 @@
 │   ├── models.py              # Database models
 │   ├── serializers.py         # DRF serializers
 │   ├── views.py               # API views
-│   └── urls.py                # API URL routes
+│   ├── urls.py                # API URL routes
+│   ├── tests.py               # API tests
+│   └── migrations/            # Schema migrations
 ├── init.sh                    # Setup script
 ├── run.sh                     # Start dev server
 ├── stop.sh                    # Stop dev server
@@ -47,7 +49,7 @@
 
 | Method | Path              | Description         |
 | ------ | ----------------- | ------------------- |
-| GET    | `/api/health/`    | Health check        |
+| GET    | `/api/health/`    | Health check (public) |
 | GET    | `/api/items/`     | List all items      |
 | POST   | `/api/items/`     | Create an item      |
 | GET    | `/api/items/:id/` | Get item by ID      |
@@ -75,6 +77,9 @@ python manage.py makemigrations
 
 # Apply migrations
 python manage.py migrate
+
+# Run tests
+python manage.py test
 
 # Open Django shell
 python manage.py shell

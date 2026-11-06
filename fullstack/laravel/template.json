@@ -1,8 +1,8 @@
 {
   "id": "laravel",
   "name": "Laravel",
-  "description": "Laravel PHP full-stack application with Blade, Eloquent, and Docker setup",
-  "version": "1.0.0",
+  "description": "Laravel 13 PHP full-stack application with Blade, Eloquent, and Docker setup",
+  "version": "2.0.0",
   "category": "fullstack",
   "icon": "🔴",
   "tech": ["PHP", "Laravel", "Blade", "MySQL", "Docker"],
@@ -30,6 +30,7 @@
       "description": "Port for the development server"
     }
   ],
+  "prerequisites": ["php >= 8.3", "composer >= 2", "docker"],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-06T00:00:00Z"
 }

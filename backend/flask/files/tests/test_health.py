@@ -1,16 +1,13 @@
 import pytest
 from app import create_app
+from app.config import TestConfig
 
 
 @pytest.fixture
 def client():
-    app = create_app()
-    app.config["TESTING"] = True
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
+    # The database binds when the app is created, so a test database must be in the config passed in.
+    app = create_app(TestConfig)
     with app.test_client() as client:
-        with app.app_context():
-            from app import db
-            db.create_all()
         yield client
 
 

@@ -6,20 +6,21 @@ Go web server built with the Fiber framework. Includes CORS middleware, request 
 
 ## Tech Stack
 
-- **Go 1.22+** — Compiled language with built-in concurrency
+- **Go 1.26+** — Compiled language with built-in concurrency
 - **Fiber v2** — Express-inspired web framework for Go (built on fasthttp)
 - **godotenv** — Environment variable loading from `.env`
 
 ## Prerequisites
 
-- Go >= 1.22
+- Go >= 1.26
 
 ## Project Structure
 
 ```
 main.go                   — Entry point: Fiber app setup, middleware, routes, listen
 handlers/items.go         — Item CRUD handler functions
-go.mod                    — Go module definition and dependencies
+handlers/items_test.go    — Handler tests (fiber app.Test, no network listener)
+go.mod / go.sum           — Go module definition and pinned dependency checksums
 .env.example              — Environment variable defaults
 init.sh                   — Download dependencies and setup .env
 run.sh                    — Start the server via go run
@@ -51,6 +52,12 @@ bash run.sh
 
 The server starts at `http://localhost:3000`.
 
+Run the tests:
+
+```bash
+go test ./...
+```
+
 For a compiled binary:
 
 ```bash
@@ -76,8 +83,8 @@ docker run -d -p 3000:3000 --env-file .env --name go-fiber-api go-fiber-api
 ```
 
 The Dockerfile uses a multi-stage build:
-1. **Stage 1 (golang:1.22-alpine):** Downloads dependencies and compiles a static binary with `CGO_ENABLED=0`.
-2. **Stage 2 (alpine:3.19):** Copies only the compiled binary. Final image is ~15 MB.
+1. **Stage 1 (golang:1.27-alpine):** Downloads dependencies and compiles a static binary with `CGO_ENABLED=0`.
+2. **Stage 2 (alpine:3.24):** Copies only the compiled binary. Final image is ~15 MB.
 
 ## Health Check
 

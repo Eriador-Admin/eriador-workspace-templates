@@ -30,9 +30,9 @@ app/
   dashboard/
     page.tsx          # Protected page
 auth.ts               # Auth.js configuration
-middleware.ts          # Route protection middleware
+proxy.ts              # Route protection (Next.js proxy)
 ```
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20.9+

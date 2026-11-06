@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { Program, AnchorProvider, BN, web3 } from "@coral-xyz/anchor";
+import { AnchorProvider, web3 } from "@anchor-lang/core";
 
 // After building, import the IDL from target/idl/counter.json
 // For now, define a minimal placeholder

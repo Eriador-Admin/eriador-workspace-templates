@@ -1,34 +1,34 @@
 import { expect } from "chai";
-import { ethers } from "hardhat";
-import { MyNFT } from "../typechain-types";
-import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
+import { network } from "hardhat";
+import type { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/types";
+import type { MyNFT } from "../types/ethers-contracts/index.js";
+
+const { ethers } = await network.create();
 
 describe("MyNFT", function () {
   let nft: MyNFT;
-  let owner: SignerWithAddress;
-  let user1: SignerWithAddress;
-  let user2: SignerWithAddress;
+  let owner: HardhatEthersSigner;
+  let user1: HardhatEthersSigner;
 
   const BASE_URI = "ipfs://QmBaseURI/";
   const UNREVEALED_URI = "ipfs://QmUnrevealed";
   const MINT_PRICE = ethers.parseEther("0.01");
 
   beforeEach(async function () {
-    [owner, user1, user2] = await ethers.getSigners();
-    const factory = await ethers.getContractFactory("MyNFT");
-    nft = await factory.deploy(BASE_URI, UNREVEALED_URI);
+    [owner, user1] = await ethers.getSigners();
+    nft = await ethers.deployContract("MyNFT", [BASE_URI, UNREVEALED_URI]);
   });
 
   describe("Minting", function () {
     it("should mint a single token", async function () {
       await nft.connect(user1).mint(1, { value: MINT_PRICE });
       expect(await nft.ownerOf(1)).to.equal(user1.address);
-      expect(await nft.totalSupply()).to.equal(1);
+      expect(await nft.totalSupply()).to.equal(1n);
     });
 
     it("should mint multiple tokens", async function () {
       await nft.connect(user1).mint(3, { value: MINT_PRICE * 3n });
-      expect(await nft.balanceOf(user1.address)).to.equal(3);
+      expect(await nft.balanceOf(user1.address)).to.equal(3n);
     });
 
     it("should reject insufficient payment", async function () {
@@ -72,11 +72,11 @@ describe("MyNFT", function () {
       const balanceBefore = await ethers.provider.getBalance(owner.address);
       await nft.withdraw();
       const balanceAfter = await ethers.provider.getBalance(owner.address);
-      expect(balanceAfter).to.be.greaterThan(balanceBefore);
+      expect(balanceAfter > balanceBefore).to.equal(true);
     });
 
     it("should reject non-owner withdraw", async function () {
-      await expect(nft.connect(user1).withdraw()).to.be.reverted;
+      await expect(nft.connect(user1).withdraw()).to.revert(ethers);
     });
   });
 });

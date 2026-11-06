@@ -12,6 +12,7 @@
   "access": "public",
   "featured": false,
   "sort_order": 10,
+  "prerequisites": ["Node.js 22.18+ or 24.11+"],
   "variables": [
     {
       "name": "PACKAGE_NAME",
@@ -31,5 +32,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

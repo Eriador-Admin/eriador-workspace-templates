@@ -39,5 +39,5 @@ docker-compose.yml    # MailHog for local testing
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20+
 - Docker (for MailHog local SMTP)

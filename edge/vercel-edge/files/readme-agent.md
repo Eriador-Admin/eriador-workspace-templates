@@ -3,7 +3,8 @@
 This is a Vercel Edge Functions project using Next.js App Router.
 
 ## Tech Stack
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js 16 (App Router), React 19
+- **Edge helpers**: `@vercel/functions` (`geolocation()`, `ipAddress()` replace the removed `request.geo` / `request.ip`)
 - **Runtime**: Vercel Edge Runtime
 - **Language**: TypeScript
 

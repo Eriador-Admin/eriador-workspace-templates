@@ -6,15 +6,15 @@ Single-page React application built with Vite, React Router for client-side rout
 
 ## Tech Stack
 
-- **React 18** — UI component library
-- **Vite 5** — Build tool and dev server with HMR
-- **React Router 6** — Client-side routing
+- **React 19** — UI component library
+- **Vite 8** — Build tool and dev server with HMR
+- **React Router 8** — Client-side routing (imported from `react-router`)
 - **Tailwind CSS 3** — Utility-first CSS framework
 - **PostCSS / Autoprefixer** — CSS processing
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 22.22
 - npm (included with Node.js)
 
 ## Project Structure
@@ -25,8 +25,8 @@ vite.config.js        — Vite build configuration (plugins, port, proxy)
 tailwind.config.js    — Tailwind CSS theme and content paths
 postcss.config.js     — PostCSS plugins (Tailwind, Autoprefixer)
 index.html            — HTML entry point
-src/main.js           — Application entry point, mounts React root
-src/App.js            — Root component with router setup
+src/main.jsx          — Application entry point, mounts React root
+src/App.jsx           — Root component with router setup
 src/index.css         — Global styles and Tailwind directives
 .env.example          — Environment variable defaults
 init.sh               — Install dependencies and setup
@@ -80,7 +80,7 @@ docker run -d -p 8080:80 --name react-vite-app react-vite-app
 ```
 
 The Dockerfile uses a multi-stage build:
-1. **Stage 1 (node:20-alpine):** Installs dependencies and runs `npm run build` to produce the `dist/` bundle.
+1. **Stage 1 (node:24-alpine):** Installs dependencies and runs `npm run build` to produce the `dist/` bundle.
 2. **Stage 2 (nginx:alpine):** Copies the static bundle into nginx's default serve directory.
 
 The container serves on port **80**. Map it to any host port.
@@ -103,7 +103,7 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/
 
 ## Customization
 
-- **Add pages:** Create components in `src/` and add routes in `src/App.js`
+- **Add pages:** Create components in `src/` and add routes in `src/App.jsx`
 - **Add API calls:** Use `import.meta.env.VITE_API_URL` as the base URL for fetch/axios calls
 - **Configure proxy:** In `vite.config.js`, add a `server.proxy` entry to forward `/api` requests to a backend during development
 - **Change styling:** Modify `tailwind.config.js` for theme changes and `src/index.css` for global styles

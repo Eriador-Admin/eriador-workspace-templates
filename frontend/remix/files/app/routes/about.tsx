@@ -1,7 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
+import type { Route } from "./+types/about";
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = () => {
   return [{ title: "About — {{PROJECT_NAME}}" }];
 };
 

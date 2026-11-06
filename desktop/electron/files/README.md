@@ -26,10 +26,12 @@ src/
 ## Build for Distribution
 
 ```bash
-npm run build
-npm run package    # creates platform-specific bundle
+npm run build      # compiles the main process and bundles the renderer into dist/
+npm start          # runs the built app with Electron
 ```
+
+Packaging into installers is not wired in this starter; add a packager such as Electron Forge when you need platform bundles.
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 22.12+

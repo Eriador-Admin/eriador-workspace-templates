@@ -12,7 +12,7 @@
   "access": "public",
   "featured": false,
   "sort_order": 11,
-  "prerequisites": ["Node.js 18+"],
+  "prerequisites": ["Node.js 20.19+"],
   "variables": [
     {
       "name": "PROJECT_NAME",
@@ -24,5 +24,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

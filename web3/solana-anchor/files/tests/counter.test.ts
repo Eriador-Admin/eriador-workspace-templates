@@ -1,19 +1,20 @@
-import * as anchor from "@coral-xyz/anchor";
-import { Program } from "@coral-xyz/anchor";
+import * as anchor from "@anchor-lang/core";
+import { Program } from "@anchor-lang/core";
 import { Keypair, SystemProgram } from "@solana/web3.js";
 import { expect } from "chai";
+import type { Counter } from "../target/types/counter";
 
 describe("counter", () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
-  const program = anchor.workspace.Counter as Program;
+  const program = anchor.workspace.Counter as Program<Counter>;
   const counterKeypair = Keypair.generate();
 
   it("initializes the counter", async () => {
     await program.methods
       .initialize()
-      .accounts({
+      .accountsPartial({
         counter: counterKeypair.publicKey,
         authority: provider.wallet.publicKey,
         systemProgram: SystemProgram.programId,
@@ -33,7 +34,7 @@ describe("counter", () => {
   it("increments the counter", async () => {
     await program.methods
       .increment()
-      .accounts({
+      .accountsPartial({
         counter: counterKeypair.publicKey,
         authority: provider.wallet.publicKey,
       })
@@ -48,7 +49,7 @@ describe("counter", () => {
   it("increments again", async () => {
     await program.methods
       .increment()
-      .accounts({
+      .accountsPartial({
         counter: counterKeypair.publicKey,
         authority: provider.wallet.publicKey,
       })
@@ -63,7 +64,7 @@ describe("counter", () => {
   it("decrements the counter", async () => {
     await program.methods
       .decrement()
-      .accounts({
+      .accountsPartial({
         counter: counterKeypair.publicKey,
         authority: provider.wallet.publicKey,
       })
@@ -78,7 +79,7 @@ describe("counter", () => {
   it("sets the counter to a specific value", async () => {
     await program.methods
       .set(new anchor.BN(42))
-      .accounts({
+      .accountsPartial({
         counter: counterKeypair.publicKey,
         authority: provider.wallet.publicKey,
       })

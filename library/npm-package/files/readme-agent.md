@@ -4,8 +4,9 @@ This is a TypeScript npm package project.
 
 ## Tech Stack
 - **Language**: TypeScript
-- **Bundler**: tsup (esbuild-based)
-- **Testing**: Vitest
+- **Bundler**: tsup 9 (esbuild-based)
+- **Testing**: Vitest 5
+- **Node**: 22.18+ or 24.11+ for the dev toolchain (tsup 9 / Vitest 5 engine ranges)
 - **Target**: Node.js + ESM/CJS dual output
 
 ## Key Conventions

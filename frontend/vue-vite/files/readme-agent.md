@@ -7,13 +7,13 @@ Single-page Vue 3 application built with Vite, using the Composition API, Vue Ro
 ## Tech Stack
 
 - **Vue 3** — UI framework with Composition API
-- **Vite 5** — Build tool and dev server with HMR
+- **Vite 8** — Build tool and dev server with HMR
 - **Vue Router 4** — Client-side routing
 - **Pinia 2** — State management (Vue's official store)
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 20.19
 - npm (included with Node.js)
 
 ## Project Structure
@@ -79,7 +79,7 @@ docker run -d -p 8080:80 --name vue-vite-app vue-vite-app
 ```
 
 The Dockerfile uses a multi-stage build:
-1. **Stage 1 (node:20-alpine):** Installs dependencies and runs `npm run build` to produce the `dist/` bundle.
+1. **Stage 1 (node:24-alpine):** Installs dependencies and runs `npm run build` to produce the `dist/` bundle.
 2. **Stage 2 (nginx:alpine):** Copies the static bundle into nginx's default serve directory.
 
 The container serves on port **80**. Map it to any host port.

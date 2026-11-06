@@ -43,5 +43,5 @@ docker-compose.yml   # PostgreSQL
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20+
 - Docker (for PostgreSQL)

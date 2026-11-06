@@ -11,6 +11,7 @@
   "tags": ["tauri", "desktop", "rust", "react", "cross-platform"],
   "access": "public",
   "sort_order": 2,
+  "prerequisites": ["node >= 20.19", "rust (rustup)"],
   "variables": [
     {
       "name": "APP_NAME",
@@ -38,5 +39,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

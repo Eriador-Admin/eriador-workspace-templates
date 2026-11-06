@@ -9,12 +9,12 @@ Distributed data processing application using Apache Spark with PySpark bindings
 - **Apache Spark 3.5** — Distributed compute engine
 - **PySpark** — Python API for Spark
 - **Python 3.9+** — Runtime
-- **Java 11+** — Required by Spark runtime
+- **Java 11 or 17** — Required by Spark runtime (Spark 3.5 supports Java 8, 11 and 17)
 
 ## Prerequisites
 
 - Python >= 3.9
-- Java >= 11 (OpenJDK recommended)
+- Java 11 or 17 (OpenJDK recommended; set `JAVA_HOME` if several JDKs are installed)
 - pip (included with Python)
 
 ## Project Structure
@@ -30,7 +30,7 @@ data/output/            — Output directory (gitignored)
 init.sh                 — Create venv, install dependencies
 run.sh                  — Run the Spark application
 stop.sh                 — Stop running Spark processes
-Dockerfile              — Container with Spark and Python
+Dockerfile              — Container with Python 3.12, Java 17 (Temurin JRE) and PySpark
 ```
 
 ## Environment Variables

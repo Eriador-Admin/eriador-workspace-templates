@@ -31,6 +31,6 @@ npm run tauri build
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20.19+
 - Rust (install via rustup.rs)
 - Platform-specific dependencies (see Tauri prerequisites)

@@ -4,7 +4,8 @@ This is a Supabase BaaS project.
 
 ## Tech Stack
 - **BaaS**: Supabase (Postgres, Auth, Realtime, Storage)
-- **App Server**: Express + TypeScript
+- **App Server**: Express 5 + TypeScript (uploads via Multer 2)
+- **Typecheck**: `npm run typecheck`
 - **Client**: @supabase/supabase-js
 
 ## Key Conventions

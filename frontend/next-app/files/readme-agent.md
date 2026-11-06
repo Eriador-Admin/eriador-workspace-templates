@@ -2,17 +2,17 @@
 
 ## Overview
 
-Next.js 14 application using the App Router with React Server Components and built-in API routes. Supports both server-side rendering and static generation. The API routes in `app/api/` make this a full-stack capable template.
+Next.js 16 application using the App Router with React Server Components and built-in API routes. Supports both server-side rendering and static generation. The API routes in `app/api/` make this a full-stack capable template.
 
 ## Tech Stack
 
-- **Next.js 14** — React framework with App Router, SSR, and API routes
-- **React 18** — UI component library with Server Components support
+- **Next.js 16** — React framework with App Router, SSR, and API routes
+- **React 19** — UI component library with Server Components support
 - **TypeScript** — Type-safe development
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 20.9
 - npm (included with Node.js)
 
 ## Project Structure

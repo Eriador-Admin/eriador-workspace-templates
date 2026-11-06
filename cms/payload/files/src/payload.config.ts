@@ -1,16 +1,27 @@
-import { buildConfig } from "payload/config";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
-import { webpackBundler } from "@payloadcms/bundler-webpack";
-import { slateEditor } from "@payloadcms/richtext-slate";
-import { Users } from "./collections/Users";
-import { Posts } from "./collections/Posts";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import path from "path";
+import { buildConfig } from "payload";
+import sharp from "sharp";
+import { fileURLToPath } from "url";
+
 import { Media } from "./collections/Media";
+import { Posts } from "./collections/Posts";
+import { Users } from "./collections/Users";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 export default buildConfig({
-  serverURL: `http://localhost:${process.env.PORT || 3000}`,
-  editor: slateEditor({}),
+  serverURL: process.env.NEXT_PUBLIC_SERVER_URL || `http://localhost:${process.env.PORT || 3000}`,
+  admin: {
+    user: Users.slug,
+    importMap: { baseDir: path.resolve(dirname) },
+  },
+  editor: lexicalEditor(),
   db: mongooseAdapter({ url: process.env.MONGODB_URI || "mongodb://localhost:27017/payload-cms" }),
-  admin: { bundler: webpackBundler() },
   collections: [Users, Posts, Media],
-  typescript: { outputFile: "src/payload-types.ts" },
+  secret: process.env.PAYLOAD_SECRET || "",
+  typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
+  sharp,
 });

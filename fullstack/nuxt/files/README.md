@@ -1,6 +1,6 @@
 # {{PROJECT_NAME}}
 
-A full-stack web app built with [Nuxt 3](https://nuxt.com/).
+A full-stack web app built with [Nuxt 4](https://nuxt.com/).
 
 ## Getting Started
 
@@ -15,18 +15,19 @@ Open http://localhost:{{DEV_PORT}} in your browser.
 ## Project Structure
 
 ```
-app.vue             # Root component
-pages/
-  index.vue         # Homepage (/)
-  about.vue         # About page (/about)
+app/
+  app.vue           # Root component
+  pages/
+    index.vue       # Homepage (/)
+    about.vue       # About page (/about)
+  layouts/
+    default.vue     # Default layout
 server/
   api/
     hello.ts        # API route: /api/hello
-layouts/
-  default.vue       # Default layout
 nuxt.config.ts      # Nuxt configuration
 ```
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 22.22+

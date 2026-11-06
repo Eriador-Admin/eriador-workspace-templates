@@ -38,8 +38,11 @@ frontend/
 metadata/
   sample/
     1.json               # Sample token metadata
-hardhat.config.ts
+hardhat.config.ts        # Hardhat 3 config (ESM, plugins array)
+frontend/vite.config.ts  # Vite 8 + React plugin
 ```
+
+TypeChain bindings are generated into `types/ethers-contracts/` on `npx hardhat build`.
 
 ## Contract Details
 
@@ -65,5 +68,5 @@ Token metadata follows the OpenSea standard:
 
 ## Requirements
 
-- Node.js >= 18
+- Node.js 20.19+ or 22.12+
 - Browser wallet (MetaMask)

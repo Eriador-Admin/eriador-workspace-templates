@@ -6,17 +6,17 @@ Full-stack TypeScript application using the T3 stack. Combines Next.js App Route
 
 ## Tech Stack
 
-- **Next.js 14** — React framework with App Router and Server Components
-- **tRPC 10** — End-to-end type-safe API layer (no REST, no codegen)
+- **Next.js 16** / **React 19** — React framework with App Router and Server Components
+- **tRPC 11** — End-to-end type-safe API layer (no REST, no codegen)
 - **Prisma 5** — Type-safe ORM and schema-first database toolkit
-- **React Query (TanStack Query)** — Server state management for tRPC
+- **React Query (TanStack Query) 5** — Server state management for tRPC
 - **Tailwind CSS 3** — Utility-first CSS framework
-- **Zod** — Schema validation for tRPC inputs
+- **Zod 4** — Schema validation for tRPC inputs
 - **TypeScript** — Type safety across the entire stack
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 20.9
 - npm (included with Node.js)
 
 ## Project Structure
@@ -95,7 +95,7 @@ docker run -d -p 3000:3000 --env-file .env --name t3-app t3-app
 **Important:** The default `DATABASE_URL` uses SQLite (`file:./dev.db`), which works in the container but data is lost when the container is removed. For production, switch to PostgreSQL or another external database and update `prisma/schema.prisma` datasource provider accordingly.
 
 The Dockerfile:
-1. Installs dependencies
+1. Installs dependencies (the `postinstall` script runs `prisma generate`, so `prisma/` is copied first)
 2. Copies `.env.example` as `.env` for the build step (Prisma needs it at build time)
 3. Generates the Prisma client
 4. Builds the Next.js application

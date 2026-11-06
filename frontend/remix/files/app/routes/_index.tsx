@@ -1,7 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
+import type { Route } from "./+types/_index";
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = () => {
   return [
     { title: "{{PROJECT_NAME}}" },
     { name: "description", content: "Welcome to {{PROJECT_NAME}}!" },
@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", padding: "2rem" }}>
       <h1>Welcome to {{PROJECT_NAME}}</h1>
-      <p>Built with Remix.</p>
+      <p>Built with React Router (formerly Remix).</p>
       <nav>
         <ul>
           <li>

@@ -33,4 +33,4 @@ src/
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20.19+

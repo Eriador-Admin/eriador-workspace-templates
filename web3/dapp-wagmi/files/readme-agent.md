@@ -3,8 +3,8 @@
 This is a React dApp using wagmi + viem + RainbowKit.
 
 ## Tech Stack
-- **UI**: React 18 + Vite
-- **Wallet**: RainbowKit (connect UI) + wagmi (React hooks) + viem (low-level)
+- **UI**: React 19 + Vite 8
+- **Wallet**: RainbowKit 2 (connect UI) + wagmi 2 (React hooks) + viem 2 (low-level). wagmi stays on 2.x because RainbowKit 2.2.x peers on `wagmi ^2.9`.
 - **Language**: TypeScript
 
 ## Key Conventions
