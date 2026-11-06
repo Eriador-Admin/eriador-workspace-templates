@@ -4,10 +4,10 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+} from "react-router";
+import type { Route } from "./+types/root";
 
-export const links: LinksFunction = () => [];
+export const links: Route.LinksFunction = () => [];
 
 export default function App() {
   return (

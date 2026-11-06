@@ -12,6 +12,7 @@
   "access": "public",
   "featured": false,
   "sort_order": 25,
+  "prerequisites": ["node >= 22.23"],
   "variables": [
     {
       "name": "APP_NAME",
@@ -31,5 +32,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

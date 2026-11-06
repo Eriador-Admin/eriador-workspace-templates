@@ -1,17 +1,18 @@
 {
   "id": "remix",
   "name": "Remix",
-  "description": "Full-stack React framework with file-based routing, loaders, and actions",
+  "description": "Full-stack React app on React Router framework mode (the successor to Remix) with route modules, loaders, and actions",
   "version": "1.0.0",
   "category": "frontend",
   "icon": "💿",
-  "tech": ["TypeScript", "React", "Remix"],
+  "tech": ["TypeScript", "React", "React Router", "Remix"],
   "difficulty": "intermediate",
   "author": "Belfalas",
-  "tags": ["remix", "react", "fullstack", "ssr", "typescript"],
+  "tags": ["remix", "react-router", "react", "fullstack", "ssr", "typescript"],
   "access": "public",
   "featured": false,
   "sort_order": 8,
+  "prerequisites": ["node >= 22.22"],
   "variables": [
     {
       "name": "PROJECT_NAME",
@@ -31,5 +32,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

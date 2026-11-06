@@ -1,36 +1,50 @@
 import { Readable } from "stream";
+import {
+  DeleteObjectCommand,
+  GetObjectCommand,
+  PutObjectCommand,
+  paginateListObjectsV2,
+} from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { minioClient, BUCKET } from "./minio.js";
 
 export async function uploadFile(key: string, buffer: Buffer, contentType: string) {
-  await minioClient.putObject(BUCKET, key, buffer, buffer.length, {
-    "Content-Type": contentType,
-  });
+  await minioClient.send(
+    new PutObjectCommand({
+      Bucket: BUCKET,
+      Key: key,
+      Body: buffer,
+      ContentLength: buffer.length,
+      ContentType: contentType,
+    })
+  );
   return { key, size: buffer.length };
 }
 
 export async function listFiles(prefix = "") {
-  const objects: { key: string; size: number; lastModified: Date }[] = [];
-  const stream = minioClient.listObjects(BUCKET, prefix, true);
-
-  return new Promise<typeof objects>((resolve, reject) => {
-    stream.on("data", (obj) => {
-      if (obj.name) {
-        objects.push({ key: obj.name, size: obj.size, lastModified: obj.lastModified });
+  const objects: { key: string; size: number; lastModified: Date | undefined }[] = [];
+  for await (const page of paginateListObjectsV2({ client: minioClient }, { Bucket: BUCKET, Prefix: prefix })) {
+    for (const obj of page.Contents ?? []) {
+      if (obj.Key) {
+        objects.push({ key: obj.Key, size: obj.Size ?? 0, lastModified: obj.LastModified });
       }
-    });
-    stream.on("end", () => resolve(objects));
-    stream.on("error", reject);
-  });
+    }
+  }
+  return objects;
 }
 
 export async function getFile(key: string): Promise<Readable> {
-  return minioClient.getObject(BUCKET, key);
+  const { Body } = await minioClient.send(new GetObjectCommand({ Bucket: BUCKET, Key: key }));
+  if (!(Body instanceof Readable)) throw new Error(`Object ${key} has no body`);
+  return Body;
 }
 
 export async function getPresignedUrl(key: string, expirySeconds = 3600) {
-  return minioClient.presignedGetObject(BUCKET, key, expirySeconds);
+  return getSignedUrl(minioClient, new GetObjectCommand({ Bucket: BUCKET, Key: key }), {
+    expiresIn: expirySeconds,
+  });
 }
 
 export async function deleteFile(key: string) {
-  await minioClient.removeObject(BUCKET, key);
+  await minioClient.send(new DeleteObjectCommand({ Bucket: BUCKET, Key: key }));
 }

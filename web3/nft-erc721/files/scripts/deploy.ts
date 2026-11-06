@@ -1,19 +1,13 @@
-import { ethers } from "hardhat";
+import { network } from "hardhat";
 
-async function main() {
-  const baseURI = process.env.BASE_URI || "ipfs://QmPlaceholder/";
-  const unrevealedURI = "ipfs://QmUnrevealedPlaceholder";
+const { ethers } = await network.create();
 
-  const factory = await ethers.getContractFactory("MyNFT");
-  const nft = await factory.deploy(baseURI, unrevealedURI);
-  await nft.waitForDeployment();
+const baseURI = process.env.BASE_URI || "ipfs://QmPlaceholder/";
+const unrevealedURI = "ipfs://QmUnrevealedPlaceholder";
 
-  const address = await nft.getAddress();
-  console.log("MyNFT deployed to:", address);
-  console.log("Owner:", await nft.owner());
-}
+const nft = await ethers.deployContract("MyNFT", [baseURI, unrevealedURI]);
+await nft.waitForDeployment();
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+const address = await nft.getAddress();
+console.log("MyNFT deployed to:", address);
+console.log("Owner:", await nft.owner());

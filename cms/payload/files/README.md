@@ -29,15 +29,17 @@ bash stop.sh    # stop everything
 ```
 src/
   payload.config.ts     # Main Payload config
-  server.ts             # Express + Payload init
+  app/(payload)/        # Next.js routes Payload mounts (admin, REST, GraphQL)
+    admin/importMap.js  # Admin component map — regenerate with `npm run generate:importmap`
   collections/
     Users.ts            # Users collection
     Posts.ts            # Posts collection
     Media.ts            # Media collection
+next.config.ts          # Next.js config wrapped with withPayload()
 docker-compose.yml      # MongoDB
 ```
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 22.23.4+ or 24.22.1+ (Payload 3 engine requirement)
 - Docker (for MongoDB)

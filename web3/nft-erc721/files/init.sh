@@ -2,7 +2,7 @@
 set -e
 echo "Setting up {{PROJECT_NAME}}..."
 npm install
-npx hardhat compile
+npx hardhat build
 echo ""
 echo "Installing frontend dependencies..."
 cd frontend && npm install && cd ..

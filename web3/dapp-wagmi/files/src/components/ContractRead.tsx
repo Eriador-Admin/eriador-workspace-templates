@@ -17,7 +17,7 @@ export default function ContractRead() {
       <p>Counter contract at <code>{CONTRACT_ADDRESS}</code></p>
       {isLoading && <p>Loading...</p>}
       {error && <p style={{ color: "#c00" }}>Error: {error.message}</p>}
-      {number !== undefined && (
+      {number != null && (
         <p><strong>Current number:</strong> {number.toString()}</p>
       )}
     </div>

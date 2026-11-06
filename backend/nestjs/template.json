@@ -12,7 +12,7 @@
   "access": "public",
   "featured": false,
   "sort_order": 45,
-  "prerequisites": ["node >= 18"],
+  "prerequisites": ["node >= 20.19"],
   "deprecated": false,
   "deprecated_message": "",
   "post_scaffold": [
@@ -38,5 +38,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

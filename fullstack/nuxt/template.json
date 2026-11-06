@@ -1,7 +1,7 @@
 {
   "id": "nuxt",
   "name": "Nuxt",
-  "description": "Nuxt 3 full-stack Vue framework with file-based routing and server API",
+  "description": "Nuxt 4 full-stack Vue framework with file-based routing and server API",
   "version": "1.0.0",
   "category": "fullstack",
   "icon": "💚",
@@ -12,6 +12,7 @@
   "access": "public",
   "featured": true,
   "sort_order": 3,
+  "prerequisites": ["node >= 22.22"],
   "variables": [
     {
       "name": "PROJECT_NAME",
@@ -31,5 +32,5 @@
     }
   ],
   "created_at": "2025-01-01T00:00:00Z",
-  "updated_at": "2025-01-01T00:00:00Z"
+  "updated_at": "2026-11-05T00:00:00Z"
 }

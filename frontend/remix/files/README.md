@@ -1,6 +1,6 @@
 # {{PROJECT_NAME}}
 
-A full-stack web app built with [Remix](https://remix.run/).
+A full-stack web app built with [React Router](https://reactrouter.com/) framework mode, the successor to Remix.
 
 ## Getting Started
 
@@ -17,13 +17,23 @@ Open http://localhost:{{DEV_PORT}} in your browser.
 ```
 app/
   root.tsx          # Root layout
+  routes.ts         # Route config (maps URLs to route modules)
   routes/
     _index.tsx      # Homepage (/)
     about.tsx       # About page (/about)
-public/
-  favicon.ico
+react-router.config.ts  # Framework options (SSR on)
+vite.config.ts      # Vite + React Router plugin
 ```
+
+## Scripts
+
+| Command             | Action                                        |
+|:--------------------|:----------------------------------------------|
+| `npm run dev`       | Start the dev server                          |
+| `npm run build`     | Build client and server bundles to `build/`   |
+| `npm start`         | Serve the production build                    |
+| `npm run typecheck` | Generate route types and run `tsc`            |
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 22.22+

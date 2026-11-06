@@ -7,20 +7,19 @@ Full-stack web application built with SvelteKit. Features file-based routing, se
 ## Tech Stack
 
 - **Svelte 5** — Reactive UI compiler
-- **SvelteKit 2** — Full-stack framework with SSR, file-based routing
-- **Vite 5** — Build tool and dev server
+- **SvelteKit 3** — Full-stack framework with SSR, file-based routing
+- **Vite 8** — Build tool and dev server
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 22.17
 - npm
 
 ## Project Structure
 
 ```
 package.json                    — Dependencies and scripts
-svelte.config.js                — SvelteKit adapter configuration
-vite.config.js                  — Vite configuration
+vite.config.js                  — Vite + SvelteKit configuration (adapter and kit options go in `sveltekit({...})`)
 src/app.html                    — HTML shell template
 src/routes/+layout.svelte       — Root layout with navigation
 src/routes/+page.svelte         — Home page
@@ -50,4 +49,4 @@ bash run.sh
 - **Add pages:** Create `src/routes/<path>/+page.svelte` files
 - **Add API routes:** Create `src/routes/api/<path>/+server.js` files
 - **Add layout:** Create `+layout.svelte` in any route directory
-- **Change adapter:** Swap `@sveltejs/adapter-auto` for node, static, etc.
+- **Change adapter:** The template uses `@sveltejs/adapter-node` (the Dockerfile runs its `build/` output with `node build`). Swap it in `vite.config.js` for `adapter-auto`, `adapter-static`, etc. SvelteKit 3 no longer reads `svelte.config.js`.

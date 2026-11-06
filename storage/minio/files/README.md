@@ -34,12 +34,12 @@ bash stop.sh    # stop everything
 ```
 src/
   app.ts         # Express API
-  minio.ts       # MinIO client setup
+  minio.ts       # S3 client (AWS SDK v3) configured for MinIO
   storage.ts     # Storage operations (upload, list, download, presign)
 docker-compose.yml
 ```
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20+
 - Docker

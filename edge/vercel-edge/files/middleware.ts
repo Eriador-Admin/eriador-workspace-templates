@@ -1,3 +1,4 @@
+import { geolocation } from "@vercel/functions";
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
@@ -9,7 +10,7 @@ export function middleware(request: NextRequest) {
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 
   // Add geo header for downstream use
-  const country = request.geo?.country || "unknown";
+  const country = geolocation(request).country || "unknown";
   response.headers.set("X-Visitor-Country", country);
 
   // Add request timing

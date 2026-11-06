@@ -28,6 +28,7 @@ src/
   main.tsx              # React entry + providers
   App.tsx               # Main app with wallet UI
   wagmi.ts              # wagmi config (chains, transports, connectors)
+  vite-env.d.ts         # Types for import.meta.env (VITE_* variables)
   components/
     ConnectButton.tsx    # RainbowKit connect button wrapper
     AccountInfo.tsx      # Connected account details + balance
@@ -52,5 +53,5 @@ index.html
 
 ## Requirements
 
-- Node.js >= 18
+- Node.js 20.19+ or 22.12+ (Vite 8)
 - A browser wallet (MetaMask recommended)

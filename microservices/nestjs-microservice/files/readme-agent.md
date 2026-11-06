@@ -3,8 +3,8 @@
 This is a NestJS microservice with hybrid HTTP + TCP transport.
 
 ## Tech Stack
-- **Framework**: NestJS
-- **Language**: TypeScript
+- **Framework**: NestJS 12
+- **Language**: TypeScript 6
 - **Transports**: HTTP (Express) + TCP microservice
 
 ## Key Conventions

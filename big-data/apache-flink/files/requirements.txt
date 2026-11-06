@@ -1,2 +1,2 @@
-apache-flink==1.19.1
-python-dotenv==1.0.1
+apache-flink==2.3.0
+python-dotenv==1.2.4

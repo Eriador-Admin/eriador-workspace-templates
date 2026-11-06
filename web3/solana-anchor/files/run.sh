@@ -3,7 +3,7 @@ set -e
 echo "Starting {{PROJECT_NAME}}..."
 
 echo "Running tests (starts local validator automatically)..."
-anchor test
+npm test
 
 echo ""
 echo "Starting frontend..."

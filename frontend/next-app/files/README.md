@@ -1,6 +1,6 @@
 # {{PROJECT_NAME}}
 
-Next.js 14 with App Router, Server Components, and API routes.
+Next.js 16 with App Router, Server Components, and API routes.
 
 Created by {{AUTHOR}} on {{DATE}}.
 

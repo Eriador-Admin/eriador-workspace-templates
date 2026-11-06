@@ -39,5 +39,5 @@ docker-compose.yml  # MongoDB container
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20.19+
 - Docker (for MongoDB)

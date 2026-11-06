@@ -3,6 +3,7 @@ dist/
 cache/
 artifacts/
 typechain-types/
+types/
 coverage/
 .env
 .DS_Store

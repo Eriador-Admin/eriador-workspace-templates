@@ -8,7 +8,9 @@ This is an Electron desktop application with React.
 - **Bundler**: Vite (renderer), tsc (main)
 
 ## Key Conventions
-- Main process: `src/main/index.ts` — creates BrowserWindow, handles IPC
+- Main process: `src/main/index.ts` — creates BrowserWindow, handles IPC (`get-version` is answered by `ipcMain.handle`)
+- `npm run dev` starts Electron with `--dev`, so the window loads the Vite dev server instead of `dist/renderer`
+- The renderer is built with `base: './'` because the packaged window loads `index.html` from disk
 - Preload: `src/main/preload.ts` — exposes safe APIs via contextBridge
 - Renderer: `src/renderer/` — standard React app loaded in BrowserWindow
 - IPC communication between main and renderer via preload bridge

@@ -46,5 +46,5 @@ supabase/
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 22+ (required by `@supabase/supabase-js` 2.119+)
 - Supabase account (free tier available)

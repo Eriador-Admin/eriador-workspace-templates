@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 
 function createWindow() {
@@ -12,13 +12,15 @@ function createWindow() {
     },
   });
 
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'development' || process.argv.includes('--dev')) {
     win.loadURL('http://localhost:{{DEV_PORT}}');
     win.webContents.openDevTools();
   } else {
     win.loadFile(path.join(__dirname, '../renderer/index.html'));
   }
 }
+
+ipcMain.handle('get-version', () => app.getVersion());
 
 app.whenReady().then(createWindow);
 

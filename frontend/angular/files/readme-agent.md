@@ -6,14 +6,14 @@ Enterprise-grade Angular application using standalone components, Angular Router
 
 ## Tech Stack
 
-- **Angular 18** — Component-based UI framework with standalone components
+- **Angular 22** — Component-based UI framework with standalone components
 - **TypeScript 5.4** — Strict type checking enabled
 - **RxJS 7** — Reactive programming for async data
 - **Angular Router** — Client-side routing
 
 ## Prerequisites
 
-- Node.js >= 18
+- Node.js >= 22.22
 - npm (included with Node.js)
 
 ## Project Structure
@@ -23,13 +23,16 @@ package.json              — Dependencies and scripts
 angular.json              — Angular CLI workspace configuration
 tsconfig.json             — TypeScript base configuration
 tsconfig.app.json         — App-specific TypeScript configuration
+tsconfig.spec.json        — TypeScript configuration for unit tests
 src/index.html            — HTML entry point
 src/main.ts               — Angular bootstrap entry
 src/styles.css            — Global styles
 src/app/app.component.ts  — Root component with router-outlet
+src/app/app.component.spec.ts — Root component unit tests
 src/app/app.config.ts     — Application providers (router)
 src/app/app.routes.ts     — Route definitions
 src/app/home/home.component.ts — Home page component
+src/app/home/home.component.spec.ts — Home page unit test
 .env.example              — Environment variable defaults
 init.sh                   — Install dependencies and setup .env
 run.sh                    — Start Angular dev server
@@ -61,6 +64,14 @@ bash run.sh
 
 Dev server runs at [http://localhost:4200](http://localhost:4200).
 
+## Tests
+
+```bash
+npm test
+```
+
+`ng test` uses the Angular CLI unit-test builder (`@angular/build:unit-test`) with Vitest and jsdom, so it runs headless with no browser install. Specs live next to the code as `*.spec.ts`.
+
 ## Docker Deployment
 
 ```bash
@@ -69,7 +80,7 @@ docker run -p 80:80 angular-app
 ```
 
 The Dockerfile uses a multi-stage build:
-1. **Build stage:** `node:20-alpine` — installs deps, runs `ng build --configuration production`
+1. **Build stage:** `node:24-alpine` — installs deps, runs `ng build --configuration production`
 2. **Serve stage:** `nginx:alpine` — serves static files from `dist/`
 
 Production app available at port 80.

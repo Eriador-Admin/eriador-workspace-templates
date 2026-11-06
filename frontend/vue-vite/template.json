@@ -12,7 +12,7 @@
   "access": "free",
   "featured": false,
   "sort_order": 30,
-  "prerequisites": ["node >= 18"],
+  "prerequisites": ["node >= 20.19"],
   "deprecated": false,
   "deprecated_message": null,
   "post_scaffold": ["Open README.md", "Run npm install", "Run npm run dev"],
@@ -36,5 +36,5 @@
     }
   ],
   "created_at": "2026-03-06",
-  "updated_at": "2026-03-06"
+  "updated_at": "2026-11-05"
 }

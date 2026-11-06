@@ -4,9 +4,9 @@ This is an ERC-721 NFT project with Hardhat + React minting frontend.
 
 ## Tech Stack
 - **Smart Contract**: Solidity ^0.8.20, OpenZeppelin
-- **Tooling**: Hardhat
-- **Frontend**: React + Vite + ethers.js
-- **Testing**: Hardhat + Chai
+- **Tooling**: Hardhat 3 (ESM config, `@nomicfoundation/hardhat-toolbox-mocha-ethers`), solc 0.8.34
+- **Frontend**: React 19 + Vite 8 + ethers.js 6
+- **Testing**: `npx hardhat test` (Mocha 12 + Chai 6 + hardhat-ethers-chai-matchers); scripts and tests get `ethers` from `await network.create()`
 
 ## Key Conventions
 - Contract in `contracts/`, tests in `test/`, deploy in `scripts/`

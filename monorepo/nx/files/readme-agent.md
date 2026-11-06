@@ -3,7 +3,7 @@
 This is an Nx monorepo workspace.
 
 ## Tech Stack
-- **Build System**: Nx
+- **Build System**: Nx 24
 - **Language**: TypeScript
 
 ## Key Conventions

@@ -21,15 +21,12 @@ if [ ! -f ~/.config/solana/id.json ]; then
   solana-keygen new --no-bip39-passphrase
 fi
 
-# Build the Anchor program
+# Build the Anchor program (keys sync writes the program ID into declare_id!() and Anchor.toml)
 echo "Building Anchor program..."
-anchor build
+npm run build
 
-# Get the program ID and display it
 PROGRAM_ID=$(anchor keys list | grep counter | awk '{print $NF}')
 echo ""
 echo "Program ID: $PROGRAM_ID"
-echo "Update declare_id!() in programs/counter/src/lib.rs"
-echo "Update [programs.localnet] in Anchor.toml"
 echo ""
 echo "Done! Run 'bash run.sh' to start the validator and run tests."

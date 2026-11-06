@@ -3,9 +3,10 @@
 This is a transactional email service project.
 
 ## Tech Stack
-- **Email**: Nodemailer
+- **Email**: Nodemailer 10
 - **Local SMTP**: MailHog
-- **App Server**: Express + TypeScript
+- **App Server**: Express 5 + TypeScript
+- **Typecheck**: `npm run typecheck`
 
 ## Key Conventions
 - Entry point: `src/app.ts`

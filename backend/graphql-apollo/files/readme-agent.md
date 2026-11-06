@@ -4,7 +4,7 @@ This is a GraphQL API using Apollo Server.
 
 ## Tech Stack
 - **Runtime**: Node.js / TypeScript
-- **GraphQL Server**: Apollo Server v4
+- **GraphQL Server**: Apollo Server v5 (graphql-js 16)
 - **Schema**: SDL-first (typeDefs + resolvers)
 
 ## Key Conventions

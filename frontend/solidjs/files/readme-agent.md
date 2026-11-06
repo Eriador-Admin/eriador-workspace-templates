@@ -3,7 +3,7 @@
 This is a SolidJS SPA with Vite.
 
 ## Tech Stack
-- **Framework**: SolidJS 1.8+
+- **Framework**: SolidJS 1.9+
 - **Bundler**: Vite
 - **Language**: TypeScript + JSX
 - **Router**: @solidjs/router

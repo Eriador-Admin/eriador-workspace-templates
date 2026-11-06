@@ -12,10 +12,10 @@ bash stop.sh    # stop validator + frontend
 
 ## Prerequisites
 
-- [Rust](https://rustup.rs/) (stable)
-- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools) >= 1.18
-- [Anchor CLI](https://www.anchor-lang.com/docs/installation) >= 0.30
-- Node.js >= 18
+- [Rust](https://rustup.rs/) via rustup, 1.89+ (`cargo build-sbf` registers its toolchain through rustup)
+- [Solana CLI (Agave)](https://docs.anza.xyz/cli/install) 4.x — provides `cargo build-sbf` and `solana-test-validator`
+- [Anchor CLI](https://www.anchor-lang.com/docs/installation) 1.2.x (`avm install 1.2.2`)
+- Node.js 20.19+ or 22.12+
 
 ## Project Structure
 
@@ -36,6 +36,10 @@ app/
   package.json
 ```
 
+`npm run build` runs `anchor keys sync` first: Anchor 1.x refuses to build while `declare_id!()` differs from `target/deploy/counter-keypair.json`. `npm test` uses `anchor test --validator legacy` (`solana-test-validator` from the Solana CLI); drop the flag to use Anchor's default Surfpool validator if you have it installed.
+
+The frontend registers wallets through the Wallet Standard (`wallets={[]}`), which Phantom, Solflare, Backpack and other current wallets support. To add a wallet that only ships a legacy adapter, install its single `@solana/wallet-adapter-<name>` package and pass it in `wallets`.
+
 ## Program
 
 The Counter program has 4 instructions:
@@ -50,11 +54,14 @@ The Counter program has 4 instructions:
 ## Useful Commands
 
 ```bash
-# Build the program
-anchor build
+# Sync the program ID into declare_id!() and Anchor.toml, then build (program + IDL + TS types)
+npm run build
 
-# Run tests against local validator
-anchor test
+# Run tests against a local solana-test-validator
+npm test
+
+# Type-check the tests (after a build has generated target/types)
+npm run typecheck
 
 # Deploy to devnet
 anchor deploy --provider.cluster devnet

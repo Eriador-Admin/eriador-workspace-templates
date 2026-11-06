@@ -3,7 +3,8 @@
 This is a Drizzle ORM project with PostgreSQL.
 
 ## Tech Stack
-- **ORM**: Drizzle ORM
+- **ORM**: Drizzle ORM 0.45 + drizzle-kit 0.31 (postgres.js 4 driver), Express 5
+- **Typecheck**: `npm run typecheck`
 - **Database**: PostgreSQL (Docker)
 - **App Server**: Express + TypeScript
 
